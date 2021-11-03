@@ -1,0 +1,20 @@
+{
+  "name": "getonecms-onebasic",
+  "version": "1.0.0",
+  "description": "OneCMS base theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mohammed Shifreen",
+  "license": "",
+  "keywords": [],
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "browser-sync": "^2.27.4",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "laravel-mix": "^6.0.25",
+    "postcss": "^8.3.5",
+    "tailwindcss": "^2.2.4"
+  }
+}

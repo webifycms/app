@@ -1,0 +1,100 @@
+{
+  "name": "getonecms/app",
+  "description": "OneCMS application",
+  "keywords": [
+    "onecms",
+    "cms",
+    "cms project",
+    "php cms",
+    "yii2 cms"
+  ],
+  "homepage": "https://www.getonecms.com/",
+  "type": "project",
+  "support": {
+    "issues": "https://github.com/getonecms/app/issues?state=open",
+    "source": "https://github.com/getonecms/app"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=7.4",
+    "getonecms/base": "dev-master",
+    "getonecms/admin": "dev-master",
+    "getonecms/user": "dev-master"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5",
+    "yiisoft/yii2-debug": "~2.1.0",
+    "yiisoft/yii2-gii": "~2.1.0"
+  },
+  "config": {
+    "process-timeout": 1800,
+    "fxp-asset": {
+      "enabled": false
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/",
+      "OneBasic\\": "themes/onebasic/src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "App\\Test\\": "test/"
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "yii\\composer\\Installer::postInstall"
+    ],
+    "post-create-project-cmd": [
+      "yii\\composer\\Installer::postCreateProject",
+      "yii\\composer\\Installer::postInstall"
+    ]
+  },
+  "optimize-autoloader": true,
+  "extra": {
+    "yii\\composer\\Installer::postCreateProject": {
+      "setPermission": [
+        {
+          "runtime": "0777",
+          "web/assets": "0777",
+          "yii": "0755"
+        }
+      ]
+    },
+    "yii\\composer\\Installer::postInstall": {
+      "generateCookieValidationKey": [
+        "config/web.php"
+      ]
+    }
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../",
+      "options": {
+        "symlink": true
+      }
+    },
+    {
+      "type": "path",
+      "url": "../*",
+      "options": {
+        "symlink": true
+      }
+    },
+    {
+      "type": "path",
+      "url": "../*",
+      "options": {
+        "symlink": true
+      }
+    },
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ]
+}
