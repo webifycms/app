@@ -11,10 +11,6 @@ $framework = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'App\Console\Controller',
-    'aliases' => [
-        '@bower' => '@vendor/bower-asset',
-        '@npm'   => '@vendor/npm-asset',
-    ],
     'components' => [
         'cache' => [
             'class' => 'yii\caching\FileCache',

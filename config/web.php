@@ -74,18 +74,18 @@ if (YII_ENV_DEV) {
     $framework['modules']['debug'] = [
         'class' => 'yii\debug\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
+        // 'allowedIPs' => ['127.0.0.1', '::1'],
     ];
     $framework['bootstrap'][] = 'gii';
     $framework['modules']['gii'] = [
         'class' => 'yii\gii\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
+        // 'allowedIPs' => ['172.19.96.1', '127.0.0.1', '::1'],
     ];
 }
 
 return [
-    'administrationPath' => 'backend',
+    // 'administrationPath' => 'backend',
     'framework' => $framework,
     'bootstrap' => [
         \OneCMS\Base\Bootstrap::class,

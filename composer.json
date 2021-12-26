@@ -1,6 +1,6 @@
 {
   "name": "getonecms/app",
-  "description": "OneCMS application",
+  "description": "OneCMS is a content management application that helps to craft beautiful websites and applications.",
   "keywords": [
     "onecms",
     "cms",
@@ -18,14 +18,15 @@
   "prefer-stable": true,
   "require": {
     "php": ">=7.4",
-    "getonecms/base": "dev-master",
-    "getonecms/admin": "dev-master",
-    "getonecms/user": "dev-master"
+    "getonecms/base-module": "dev-master",
+    "getonecms/admin-module": "dev-master",
+    "getonecms/user-module": "dev-master"
   },
   "require-dev": {
     "phpunit/phpunit": "^9.5",
     "yiisoft/yii2-debug": "~2.1.0",
-    "yiisoft/yii2-gii": "~2.1.0"
+    "yiisoft/yii2-gii": "~2.1.0",
+    "yiisoft/yii2-faker": "~2.0.0"
   },
   "config": {
     "process-timeout": 1800,
@@ -59,7 +60,7 @@
       "setPermission": [
         {
           "runtime": "0777",
-          "web/assets": "0777",
+          "public/assets": "0777",
           "yii": "0755"
         }
       ]
@@ -73,24 +74,7 @@
   "repositories": [
     {
       "type": "path",
-      "url": "../",
-      "options": {
-        "symlink": true
-      }
-    },
-    {
-      "type": "path",
-      "url": "../*",
-      "options": {
-        "symlink": true
-      }
-    },
-    {
-      "type": "path",
-      "url": "../*",
-      "options": {
-        "symlink": true
-      }
+      "url": "../*"
     },
     {
       "type": "composer",

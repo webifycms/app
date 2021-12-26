@@ -2,7 +2,7 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=onecms',
+    'dsn' => 'mysql:host=127.0.0.1;dbname=onecms',
     'username' => 'root',
     'password' => 'root',
     'charset' => 'utf8',
