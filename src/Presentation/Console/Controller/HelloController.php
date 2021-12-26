@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Controller;
+namespace App\Presentation\Console\Controller;
 
 use yii\console\Controller;
 use yii\console\ExitCode;
