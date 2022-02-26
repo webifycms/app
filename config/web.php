@@ -1,7 +1,6 @@
 <?php
 
-// set aliases
-use OneBasic\Theme;
+use OneTen\Theme;
 
 require __DIR__ . '/aliases.php';
 
@@ -26,10 +25,10 @@ $framework = [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
-//        'user' => [
-//            'identityClass' => 'app\models\User',
-//            'enableAutoLogin' => true,
-//        ],
+        //        'user' => [
+        //            'identityClass' => 'app\models\User',
+        //            'enableAutoLogin' => true,
+        //        ],
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
