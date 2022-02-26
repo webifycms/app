@@ -1,6 +1,6 @@
 {
   "name": "getonecms/app",
-  "description": "OneCMS is a content management application that helps to craft beautiful websites and applications.",
+  "description": "OneCMS is a content management application that aims to simplify the process of crafting beautiful web applications for the end-user.",
   "keywords": [
     "onecms",
     "cms",
@@ -16,8 +16,20 @@
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/getonecms"
+    },
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
   "require": {
     "php": ">=7.4",
+    "yiisoft/yii2": "^2.0",
+    "oomphinc/composer-installers-extender": "^2.0",
     "getonecms/base-module": "dev-master",
     "getonecms/admin-module": "dev-master",
     "getonecms/user-module": "dev-master"
@@ -34,13 +46,13 @@
       "enabled": false
     },
     "allow-plugins": {
-      "yiisoft/yii2-composer": true
+      "yiisoft/yii2-composer": true,
+      "oomphinc/composer-installers-extender": true
     }
   },
   "autoload": {
     "psr-4": {
-      "App\\": "src/",
-      "OneBasic\\": "themes/onebasic/src"
+      "App\\": "src/"
     }
   },
   "autoload-dev": {
@@ -59,6 +71,18 @@
   },
   "optimize-autoloader": true,
   "extra": {
+    "installer-types": [
+      "onecms-extension",
+      "onecms-theme"
+    ],
+    "installer-paths": {
+      "extensions/{$vendor}/{$name}/": [
+        "type:onecms-extension"
+      ],
+      "themes/{$name}/": [
+        "type:onecms-theme"
+      ]
+    },
     "yii\\composer\\Installer::postCreateProject": {
       "setPermission": [
         {
@@ -73,15 +97,5 @@
         "config/web.php"
       ]
     }
-  },
-  "repositories": [
-    {
-      "type": "path",
-      "url": "../*"
-    },
-    {
-      "type": "composer",
-      "url": "https://asset-packagist.org"
-    }
-  ]
+  }
 }

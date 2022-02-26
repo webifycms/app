@@ -1,20 +1,20 @@
 <?php
+
 declare(strict_types=1);
 
-namespace OneBasic;
-
+namespace OneTen;
 
 use yii\web\AssetBundle;
 
 /**
  * Class Asset
  *
- * @package OneBasic
+ * @package OneTen
+ * @version 0.0.1
  */
 class Asset extends AssetBundle
 {
-    
-    public $sourcePath = '@App/themes/onebasic/dist';
+    public $sourcePath = '@Themes/oneten/dist';
     public $css = [
         'css/app.css'
     ];

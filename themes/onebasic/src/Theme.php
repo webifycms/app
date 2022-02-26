@@ -1,15 +1,15 @@
 <?php
+
 declare(strict_types=1);
 
-namespace OneBasic;
-
+namespace OneTen;
 
 use OneCMS\Base\Infrastructure\Framework\Theme\Theme as BaseTheme;
 
 /**
  * Class Theme
  *
- * @package OneBasic
+ * @package OneTen
  * @version 0.0.1
  */
 class Theme extends BaseTheme
@@ -19,13 +19,13 @@ class Theme extends BaseTheme
      */
     public function init(): void
     {
-        $this->setBasePath('@App/themes/onebasic');
-        $this->setBaseUrl('@App/themes/onebasic');
-        
+        $this->setBasePath('@Themes/oneten');
+        $this->setBaseUrl('@Themes/oneten');
+
         $this->pathMap = [
-            '@App/templates' => '@App/themes/onebasic/templates'
+            '@App/templates' => '@Themes/oneten/templates'
         ];
-        
+
         parent::init();
     }
 }
