@@ -30,9 +30,10 @@
     "php": ">=7.4",
     "yiisoft/yii2": "^2.0",
     "oomphinc/composer-installers-extender": "^2.0",
-    "getonecms/base-module": "dev-master",
-    "getonecms/admin-module": "dev-master",
-    "getonecms/user-module": "dev-master"
+    "getonecms/base": "dev-develop",
+    "getonecms/admin": "dev-develop",
+    "getonecms/user": "dev-develop",
+    "getonecms/oneten": "dev-develop"
   },
   "require-dev": {
     "phpunit/phpunit": "^9.5",
