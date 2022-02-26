@@ -19,7 +19,19 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/getonecms"
+      "url": "https://github.com/getonecms/base"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/getonecms/admin"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/getonecms/user"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/getonecms/oneten"
     },
     {
       "type": "composer",
