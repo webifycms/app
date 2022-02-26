@@ -19,7 +19,19 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/getonecms"
+      "url": "https://github.com/getonecms/base"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/getonecms/admin"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/getonecms/user"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/getonecms/oneten"
     },
     {
       "type": "composer",
@@ -48,7 +60,8 @@
     },
     "allow-plugins": {
       "yiisoft/yii2-composer": true,
-      "oomphinc/composer-installers-extender": true
+      "oomphinc/composer-installers-extender": true,
+      "composer/installers": true
     }
   },
   "autoload": {
@@ -89,7 +102,7 @@
         {
           "runtime": "0777",
           "public/assets": "0777",
-          "yii": "0755"
+          "bin/yii": "0755"
         }
       ]
     },
