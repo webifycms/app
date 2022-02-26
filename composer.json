@@ -60,7 +60,8 @@
     },
     "allow-plugins": {
       "yiisoft/yii2-composer": true,
-      "oomphinc/composer-installers-extender": true
+      "oomphinc/composer-installers-extender": true,
+      "composer/installers": true
     }
   },
   "autoload": {
