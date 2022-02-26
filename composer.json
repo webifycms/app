@@ -89,7 +89,7 @@
         {
           "runtime": "0777",
           "public/assets": "0777",
-          "yii": "0755"
+          "bin/yii": "0755"
         }
       ]
     },
