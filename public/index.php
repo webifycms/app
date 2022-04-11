@@ -5,6 +5,9 @@ require __DIR__ . '/../vendor/autoload.php';
 // comment out or delete the following line when deployed to production
 enable_dev_env();
 
+// load the env variables
+load_env_variables(dirname(__DIR__));
+
 // load Yii class file
 require __DIR__ . '/../vendor/yiisoft/yii2/Yii.php';
 
@@ -13,5 +16,5 @@ $config = require __DIR__ . '/../config/web.php';
 
 // configure
 configure($config);
-// bootstrap the application
-app()->bootstrap();
+// start the application
+app()->start();
