@@ -42,10 +42,10 @@
     "php": ">=7.4",
     "yiisoft/yii2": "^2.0",
     "oomphinc/composer-installers-extender": "^2.0",
-    "getonecms/base": "dev-develop",
-    "getonecms/admin": "dev-develop",
-    "getonecms/user": "dev-develop",
-    "getonecms/oneten": "dev-develop"
+    "getonecms/ext-base": "dev-develop",
+    "getonecms/ext-admin": "dev-develop",
+    "getonecms/ext-user": "dev-develop",
+    "getonecms/theme-oneten": "dev-develop"
   },
   "require-dev": {
     "phpunit/phpunit": "^9.5",
