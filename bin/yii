@@ -23,6 +23,6 @@ $config = require __DIR__ . '/../config/console.php';
 // configure
 configure($config, 'console');
 // bootstrap the application
-$exitCode = console()->bootstrap();
+$exitCode = console()->start();
 // output to the console
 exit($exitCode);

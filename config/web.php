@@ -8,7 +8,7 @@ $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 $framework = [
     'id' => 'web',
-    'name' => 'OneCMS',
+    'name' => get_env_variable('APPLICATION_NAME'),
     'basePath' => '@App',
     'viewPath' => '@App/templates',
     'controllerNamespace' => 'App\Presentation\Web\Front\Controller',
@@ -87,8 +87,8 @@ return [
     // 'administrationPath' => 'backend',
     'framework' => $framework,
     'bootstrap' => [
-        \OneCMS\Base\Bootstrap::class,
-        \OneCMS\Admin\Bootstrap::class,
-        \OneCMS\User\Bootstrap::class,
+        \OneCMS\Base\WebBootstrap::class,
+        \OneCMS\Admin\WebBootstrap::class,
+        \OneCMS\User\WebBootstrap::class,
     ],
 ];
