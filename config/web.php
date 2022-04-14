@@ -88,7 +88,7 @@ return [
     'framework' => $framework,
     'bootstrap' => [
         \OneCMS\Base\WebBootstrap::class,
-        \OneCMS\Admin\Bootstrap::class,
-        \OneCMS\User\Bootstrap::class,
+        \OneCMS\Admin\WebBootstrap::class,
+        \OneCMS\User\WebBootstrap::class,
     ],
 ];
