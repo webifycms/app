@@ -51,6 +51,6 @@ if (YII_ENV_DEV) {
 return [
     'framework' => $framework,
     'bootstrap' => [
-        OneCMS\User\Infrastructure\Framework\Console\Bootstrap::class
+        OneCMS\User\ConsoleBootstrap::class
     ],
 ];

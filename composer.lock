@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "74a0d758903d3922349b274e42984c5c",
+    "content-hash": "21408ba5336f5cb3913f7f7c70e769f6",
     "packages": [
         {
             "name": "bower-asset/inputmask",
@@ -207,16 +207,16 @@
         },
         {
             "name": "composer/installers",
-            "version": "v2.1.0",
+            "version": "v2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "75e5ef05436c90ac565a48176cc7465991908352"
+                "reference": "af93ba6e52236418f07a278033eba6959ee5b983"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/75e5ef05436c90ac565a48176cc7465991908352",
-                "reference": "75e5ef05436c90ac565a48176cc7465991908352",
+                "url": "https://api.github.com/repos/composer/installers/zipball/af93ba6e52236418f07a278033eba6959ee5b983",
+                "reference": "af93ba6e52236418f07a278033eba6959ee5b983",
                 "shasum": ""
             },
             "require": {
@@ -331,7 +331,7 @@
             ],
             "support": {
                 "issues": "https://github.com/composer/installers/issues",
-                "source": "https://github.com/composer/installers/tree/v2.1.0"
+                "source": "https://github.com/composer/installers/tree/v2.1.1"
             },
             "funding": [
                 {
@@ -347,7 +347,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-18T12:27:54+00:00"
+            "time": "2022-04-13T09:13:00+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -550,12 +550,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/getonecms/ext-admin.git",
-                "reference": "f315c692de0b147b31193956abc945828e5308ed"
+                "reference": "7b8c97fd72e42abb9f676eec8566de00996e81f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getonecms/ext-admin/zipball/f315c692de0b147b31193956abc945828e5308ed",
-                "reference": "f315c692de0b147b31193956abc945828e5308ed",
+                "url": "https://api.github.com/repos/getonecms/ext-admin/zipball/7b8c97fd72e42abb9f676eec8566de00996e81f0",
+                "reference": "7b8c97fd72e42abb9f676eec8566de00996e81f0",
                 "shasum": ""
             },
             "require": {
@@ -589,7 +589,7 @@
                 "source": "https://github.com/getonecms/ext-admin/tree/develop",
                 "issues": "https://github.com/getonecms/ext-admin/issues"
             },
-            "time": "2022-04-11T04:18:26+00:00"
+            "time": "2022-04-25T17:30:37+00:00"
         },
         {
             "name": "getonecms/ext-base",
@@ -597,12 +597,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/getonecms/ext-base.git",
-                "reference": "ad02fa7678d0ca8044d47fef464c11f5b05c6a57"
+                "reference": "c9add951ee684d7361f58faa5e3c40c13768688e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getonecms/ext-base/zipball/ad02fa7678d0ca8044d47fef464c11f5b05c6a57",
-                "reference": "ad02fa7678d0ca8044d47fef464c11f5b05c6a57",
+                "url": "https://api.github.com/repos/getonecms/ext-base/zipball/c9add951ee684d7361f58faa5e3c40c13768688e",
+                "reference": "c9add951ee684d7361f58faa5e3c40c13768688e",
                 "shasum": ""
             },
             "require": {
@@ -641,7 +641,7 @@
                 "source": "https://github.com/getonecms/ext-base/tree/develop",
                 "issues": "https://github.com/getonecms/ext-base/issues"
             },
-            "time": "2022-04-11T04:21:02+00:00"
+            "time": "2022-04-14T19:11:14+00:00"
         },
         {
             "name": "getonecms/ext-user",
@@ -649,20 +649,23 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/getonecms/ext-user.git",
-                "reference": "2290ef6bf78edda7bd7db5130db276d3d6ef5834"
+                "reference": "2034d8fbc35b5314671fb0e936d7f210716fe307"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getonecms/ext-user/zipball/2290ef6bf78edda7bd7db5130db276d3d6ef5834",
-                "reference": "2290ef6bf78edda7bd7db5130db276d3d6ef5834",
+                "url": "https://api.github.com/repos/getonecms/ext-user/zipball/2034d8fbc35b5314671fb0e936d7f210716fe307",
+                "reference": "2034d8fbc35b5314671fb0e936d7f210716fe307",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.4",
+                "getonecms/ext-admin": "*",
+                "getonecms/ext-base": "*",
+                "php": ">=8.1",
                 "yiisoft/yii2": "~2.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^9.5"
+                "phpunit/phpunit": "^9.5",
+                "rector/rector": "^0.12.19"
             },
             "type": "onecms-extension",
             "autoload": {
@@ -686,7 +689,7 @@
                 "source": "https://github.com/getonecms/ext-user/tree/develop",
                 "issues": "https://github.com/getonecms/ext-user/issues"
             },
-            "time": "2022-04-02T15:30:10+00:00"
+            "time": "2022-04-14T19:23:19+00:00"
         },
         {
             "name": "getonecms/theme-oneten",
@@ -694,12 +697,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/getonecms/theme-oneten.git",
-                "reference": "8179b94cd04aa83484cf0e553ca20ae6b5be611a"
+                "reference": "f3e05eb5487640dd66efce3db0fdcc4e83b2a515"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getonecms/theme-oneten/zipball/8179b94cd04aa83484cf0e553ca20ae6b5be611a",
-                "reference": "8179b94cd04aa83484cf0e553ca20ae6b5be611a",
+                "url": "https://api.github.com/repos/getonecms/theme-oneten/zipball/f3e05eb5487640dd66efce3db0fdcc4e83b2a515",
+                "reference": "f3e05eb5487640dd66efce3db0fdcc4e83b2a515",
                 "shasum": ""
             },
             "require": {
@@ -729,7 +732,7 @@
                 "source": "https://github.com/getonecms/theme-oneten/tree/develop",
                 "issues": "https://github.com/getonecms/theme-oneten/issues"
             },
-            "time": "2022-04-07T05:04:03+00:00"
+            "time": "2022-04-25T17:26:15+00:00"
         },
         {
             "name": "graham-campbell/result-type",

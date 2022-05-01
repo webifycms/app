@@ -14,6 +14,9 @@ require __DIR__ . '/../vendor/autoload.php';
 // always enable devlopment environment because it's console
 enable_dev_env();
 
+// load the env variables
+load_env_variables(dirname(__DIR__));
+
 // load Yii class file
 require __DIR__ . '/../vendor/yiisoft/yii2/Yii.php';
 
@@ -23,6 +26,6 @@ $config = require __DIR__ . '/../config/console.php';
 // configure
 configure($config, 'console');
 // bootstrap the application
-$exitCode = console()->start();
+$output = console()->start();
 // output to the console
-exit($exitCode);
+exit($output);

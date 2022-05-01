@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Presentation\Web\Front\Controller;
@@ -15,7 +16,7 @@ use yii\web\Controller;
  */
 class SiteController extends Controller
 {
-    
+
     /**
      * @return array
      */
@@ -27,7 +28,7 @@ class SiteController extends Controller
             ]
         ];
     }
-    
+
     /**
      * @return string
      */
