@@ -16,5 +16,5 @@ $config = require __DIR__ . '/../config/web.php';
 
 // configure
 configure($config);
-// start the application
-app()->start();
+// run the application
+app()->run();
