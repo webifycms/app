@@ -11,6 +11,7 @@ $framework = [
     'name' => get_env_variable('APPLICATION_NAME'),
     'basePath' => '@App',
     'viewPath' => '@App/templates',
+    'sourceLanguage' => 'en-US',
     'controllerNamespace' => 'App\Presentation\Web\Front\Controller',
     'bootstrap' => ['log'],
     'aliases' => [
@@ -58,10 +59,19 @@ $framework = [
         ],
         'assetManager' => [
             'appendTimestamp' => true,
+            'linkAssets' => true,
             'forceCopy' => YII_DEBUG
         ],
         'view' => [
             'theme' => Theme::class
+        ],
+        'i18n' => [
+            'translations' => [
+                'app*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@App/resources/translations'
+                ],
+            ],
         ]
     ],
     'params' => $params,

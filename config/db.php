@@ -2,9 +2,9 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=127.0.0.1;dbname=onecms',
-    'username' => 'root',
-    'password' => 'root',
+    'dsn' => get_env_variable('DATABASE_DSN') . ';dbname=' . get_env_variable('DATABASE_NAME'),
+    'username' => get_env_variable('DATABASE_USERNAME'),
+    'password' => get_env_variable('DATABASE_PASSWORD'),
     'charset' => 'utf8',
     'tablePrefix' => 'one_',
 
