@@ -3,7 +3,7 @@
 return [
     'class' => 'yii\db\Connection',
     'dsn' => get_env_variable('DATABASE_DSN') . ';dbname=' . get_env_variable('DATABASE_NAME'),
-    'username' => get_env_variable('DATABASE_USERNAME'),
+    'username' => get_env_variable('DATABASE_USER'),
     'password' => get_env_variable('DATABASE_PASSWORD'),
     'charset' => 'utf8',
     'tablePrefix' => 'one_',
