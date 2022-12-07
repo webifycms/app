@@ -21,7 +21,7 @@ $framework = [
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'hZz4eOt7zrFCbvJ8RcX9CkbnSO7_cjs2',
+            'cookieValidationKey' => get_env_variable('COOKIE_VALIDATION_KEY'),
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -97,7 +97,7 @@ return [
     // 'administrationPath' => 'backend',
     'framework' => $framework,
     'bootstrap' => [
-        \OneCMS\Base\WebBootstrap::class,
+        \OneCMS\Base\Infrastructure\WebBootstrap::class,
         \OneCMS\Admin\WebBootstrap::class,
         \OneCMS\User\WebBootstrap::class,
     ],

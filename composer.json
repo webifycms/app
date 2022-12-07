@@ -18,20 +18,28 @@
   "prefer-stable": true,
   "repositories": [
     {
-      "type": "vcs",
-      "url": "https://github.com/getonecms/ext-base"
+      "type": "path",
+      "url": "../onecms-extensions/ext-base"
+    },
+    {
+      "type": "path",
+      "url": "../onecms-extensions/ext-admin"
+    },
+    {
+      "type": "path",
+      "url": "../onecms-extensions/ext-user"
+    },
+    {
+      "type": "path",
+      "url": "../onecms-extensions/theme-oneten"
+    },
+    {
+      "type": "path",
+      "url": "../onecms-extensions/theme-onetwenty"
     },
     {
       "type": "vcs",
-      "url": "https://github.com/getonecms/ext-admin"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/getonecms/ext-user"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/getonecms/theme-oneten"
+      "url": "https://github.com/getonecms/dev-tools"
     },
     {
       "type": "composer",
@@ -42,10 +50,11 @@
     "php": ">=8.1",
     "yiisoft/yii2": "^2.0",
     "oomphinc/composer-installers-extender": "^2.0",
-    "getonecms/ext-base": "dev-develop",
-    "getonecms/ext-admin": "dev-develop",
-    "getonecms/ext-user": "dev-develop",
-    "getonecms/theme-oneten": "dev-develop"
+    "getonecms/ext-base": "dev-development",
+    "getonecms/ext-admin": "dev-development",
+    "getonecms/ext-user": "dev-development",
+    "getonecms/theme-oneten": "dev-development",
+    "getonecms/theme-onetwenty": "dev-development"
   },
   "require-dev": {
     "phpunit/phpunit": "^9.5",

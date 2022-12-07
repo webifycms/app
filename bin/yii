@@ -11,7 +11,7 @@
 // should require the composer autoloader on first
 require __DIR__ . '/../vendor/autoload.php';
 
-// always enable devlopment environment because it's console
+// always enable development environment because it's console
 enable_dev_env();
 
 // load the env variables
@@ -26,6 +26,6 @@ $config = require __DIR__ . '/../config/console.php';
 // configure
 configure($config, 'console');
 // bootstrap the application
-$output = console()->start();
+$output = console()->run();
 // output to the console
 exit($output);
