@@ -16,36 +16,6 @@
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
-  "repositories": [
-    {
-      "type": "path",
-      "url": "../onecms-extensions/ext-base"
-    },
-    {
-      "type": "path",
-      "url": "../onecms-extensions/ext-admin"
-    },
-    {
-      "type": "path",
-      "url": "../onecms-extensions/ext-user"
-    },
-    {
-      "type": "path",
-      "url": "../onecms-extensions/theme-oneten"
-    },
-    {
-      "type": "path",
-      "url": "../onecms-extensions/theme-onetwenty"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/getonecms/dev-tools"
-    },
-    {
-      "type": "composer",
-      "url": "https://asset-packagist.org"
-    }
-  ],
   "require": {
     "php": ">=8.1",
     "yiisoft/yii2": "^2.0",
@@ -57,11 +27,42 @@
     "getonecms/theme-onetwenty": "dev-development"
   },
   "require-dev": {
+    "getonecms/dev-tools": "*",
     "phpunit/phpunit": "^9.5",
     "yiisoft/yii2-debug": "~2.1.0",
     "yiisoft/yii2-gii": "~2.1.0",
     "yiisoft/yii2-faker": "~2.0.0"
   },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/getonecms/ext-base"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/getonecms/ext-admin"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/getonecms/ext-user"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/getonecms/theme-oneten"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/getonecms/theme-onetwenty"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/getonecms/dev-tools"
+    },
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
   "config": {
     "process-timeout": 1800,
     "fxp-asset": {
@@ -90,6 +91,15 @@
     "post-create-project-cmd": [
       "yii\\composer\\Installer::postCreateProject",
       "yii\\composer\\Installer::postInstall"
+    ],
+    "code-sniff": [
+      "php-cs-fixer fix --verbose --dry-run --diff --show-progress=dots --using-cache=no"
+    ],
+    "code-sniff-format": [
+      "php-cs-fixer fix --verbose --show-progress=dots"
+    ],
+    "code-analyze": [
+      "phpstan"
     ]
   },
   "optimize-autoloader": true,
@@ -117,7 +127,7 @@
     },
     "yii\\composer\\Installer::postInstall": {
       "generateCookieValidationKey": [
-        "config/web.php"
+        "config/framework/web.php"
       ]
     }
   }
