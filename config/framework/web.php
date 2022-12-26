@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use OneTen\Theme;
+use OneTwenty\Theme;
 
 require __DIR__ . '/aliases.php';
 

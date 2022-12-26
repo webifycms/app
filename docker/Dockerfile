@@ -1,9 +1,6 @@
 # base image
 FROM php:8.1-fpm
 
-# setting working directory
-WORKDIR /app
-
 # copying application directory
 COPY . /app
 
@@ -35,18 +32,19 @@ RUN chmod +x /usr/local/bin/install-php-extensions && \
 #installing nodejs
 RUN apt-get update && apt-get install -y nodejs
 
+# setting working directory
+WORKDIR /app
+
 # add user for the application and update permissions
 RUN groupadd -g 1000 app-www
 RUN useradd -u 1000 -ms /bin/bash -g app-www app-www
 RUN chown -R app-www:app-www .
-RUN chmod -R 0777 /app/runtime /app/public/assets
-RUN chmod -R 0755 /app/bin/yii
+RUN chmod -R 0777 ./runtime
+RUN chmod -R 0777 ./public/assets
+RUN chmod -R 0755 ./bin/yii
 
 # set current user
 USER app-www
-
-# create log directory and change permissions
-RUN mkdir /app/runtime/log
 
 # start php-fpm server with port 9000
 EXPOSE 9000
