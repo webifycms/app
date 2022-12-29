@@ -16,7 +16,4 @@ $finder = Finder::create()
 	->name('*.php')
 ;
 
-return (new Fixer($finder))
-	->getConfig()
-	->setUsingCache(false)
-;
+return (new Fixer($finder))->getConfig();
