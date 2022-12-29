@@ -30,7 +30,6 @@
     "getonecms/dev-tools": "*",
     "phpunit/phpunit": "^9.5",
     "yiisoft/yii2-debug": "~2.1.0",
-    "yiisoft/yii2-gii": "~2.1.0",
     "yiisoft/yii2-faker": "~2.0.0"
   },
   "repositories": [
@@ -93,9 +92,9 @@
       "yii\\composer\\Installer::postInstall"
     ],
     "code-sniff": [
-      "php-cs-fixer fix --verbose --dry-run --diff --show-progress=dots --using-cache=no"
+      "php-cs-fixer fix --verbose --dry-run --diff --show-progress=dots"
     ],
-    "code-sniff-format": [
+    "code-format": [
       "php-cs-fixer fix --verbose --show-progress=dots"
     ],
     "code-analyze": [
