@@ -34,32 +34,32 @@
   },
   "repositories": [
     {
-      "type": "vcs",
-      "url": "https://github.com/getonecms/ext-base"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/getonecms/ext-admin"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/getonecms/ext-user"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/getonecms/theme-oneten"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/getonecms/theme-onetwenty"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/getonecms/dev-tools"
-    },
-    {
       "type": "composer",
       "url": "https://asset-packagist.org"
+    },
+    {
+      "type": "path",
+      "url": "../onecms-ext-base"
+    },
+    {
+      "type": "path",
+      "url": "../onecms-ext-admin"
+    },
+    {
+      "type": "path",
+      "url": "../onecms-ext-user"
+    },
+    {
+      "type": "path",
+      "url": "../onecms-theme-oneten"
+    },
+    {
+      "type": "path",
+      "url": "../onecms-theme-onetwenty"
+    },
+    {
+      "type": "path",
+      "url": "../onecms-dev-tools"
     }
   ],
   "config": {
