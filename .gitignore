@@ -37,3 +37,6 @@ phpunit.phar
 
 #vagrant folder
 /.vagrant
+
+# phpcsfixer cache is not needed
+.php-cs-fixer.cache
