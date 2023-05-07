@@ -15,7 +15,7 @@ services:
       - php-service
       - mysql-service
     networks:
-      - onecms-docker
+      - webify-docker
 
   # php
   php-service:
@@ -31,7 +31,7 @@ services:
       - ./docker/php/php.ini:/usr/local/etc/php/conf.d/local.ini
       - ./docker/php/entrypoint.sh:/bin/php/entrypoint.sh
     networks:
-      - onecms-docker
+      - webify-docker
 
   # mysql
   mysql-service:
@@ -46,9 +46,9 @@ services:
       MYSQL_DATABASE: ${DATABASE_NAME}
     command: --authentication_policy=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     volumes:
-      - onecms-data:/var/lib/mysql
+      - webify-data:/var/lib/mysql
     networks:
-      - onecms-docker
+      - webify-docker
 
   # node
   node-service:
@@ -63,13 +63,13 @@ services:
     volumes:
       - ./:/app
     networks:
-      - onecms-docker
+      - webify-docker
 
 # docker network
 networks:
-  onecms-docker:
+  webify-docker:
 
 # data persitence volumes
 volumes:
-  onecms-data:
+  webify-data:
     driver: local

@@ -1,14 +1,24 @@
 #!/usr/bin/env php
 <?php
 /**
- * Yii console bootstrap file.
+ * WebifyCMS console bootstrap file.
  *
- * @link http://www.yiiframework.com/
- * @copyright Copyright (c) 2008 Yii Software LLC
- * @license http://www.yiiframework.com/license/
+ * The file is part of the "webifycms/app", WebifyCMS application.
+ *
+ * @see https://webifycms.com/
+ *
+ * @copyright Copyright (c) 2023 WebifyCMS
+ * @license https://webifycms.com/license
+ * @author Mohammed Shifreen <mshifreen@gmail.com>
  */
+declare(strict_types=1);
 
 // should require the composer autoloader on first
+use function Webify\Base\Infrastructure\app;
+use function Webify\Base\Infrastructure\configure;
+use function Webify\Base\Infrastructure\enable_dev_env;
+use function Webify\Base\Infrastructure\load_env_variables;
+
 require __DIR__ . '/../vendor/autoload.php';
 
 // always enable development environment because it's console
@@ -26,6 +36,6 @@ $config = require __DIR__ . '/../config/console.php';
 // configure
 configure($config, 'console');
 // bootstrap the application
-$output = console()->run();
+$output = app()->run();
 // output to the console
 exit($output);
