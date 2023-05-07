@@ -1,18 +1,19 @@
 {
-  "name": "getonecms/app",
-  "description": "OneCMS is a content management application that aims to simplify the process of crafting beautiful web applications for the end-user.",
+  "name": "webifycms/app",
+  "description": "WebifyCMS is a content management application that aims to simplify the process of crafting beautiful web applications for the end-user.",
   "keywords": [
-    "onecms",
+    "webify",
+    "webifycms",
     "cms",
     "cms project",
     "php cms",
     "yii2 cms"
   ],
-  "homepage": "https://www.getonecms.com/",
+  "homepage": "https://www.webifycms.com/",
   "type": "project",
   "support": {
-    "issues": "https://github.com/getonecms/app/issues?state=open",
-    "source": "https://github.com/getonecms/app"
+    "issues": "https://github.com/webifycms/app/issues?state=open",
+    "source": "https://github.com/webifycms/app"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
@@ -20,14 +21,13 @@
     "php": ">=8.1",
     "yiisoft/yii2": "^2.0",
     "oomphinc/composer-installers-extender": "^2.0",
-    "getonecms/ext-base": "dev-development",
-    "getonecms/ext-admin": "dev-development",
-    "getonecms/ext-user": "dev-development",
-    "getonecms/theme-oneten": "dev-development",
-    "getonecms/theme-onetwenty": "dev-development"
+    "webifycms/ext-base": "dev-development",
+    "webifycms/ext-admin": "dev-development",
+    "webifycms/ext-user": "dev-development",
+    "webifycms/theme-green": "dev-development"
   },
   "require-dev": {
-    "getonecms/dev-tools": "*",
+    "webifycms/dev-tools": "*",
     "phpunit/phpunit": "^9.5",
     "yiisoft/yii2-debug": "~2.1.0",
     "yiisoft/yii2-faker": "~2.0.0"
@@ -38,28 +38,24 @@
       "url": "https://asset-packagist.org"
     },
     {
-      "type": "path",
-      "url": "../onecms-ext-base"
+      "type": "vcs",
+      "url": "https://github.com/webifycms/ext-base"
     },
     {
-      "type": "path",
-      "url": "../onecms-ext-admin"
+      "type": "vcs",
+      "url": "https://github.com/webifycms/ext-admin"
     },
     {
-      "type": "path",
-      "url": "../onecms-ext-user"
+      "type": "vcs",
+      "url": "https://github.com/webifycms/ext-user"
     },
     {
-      "type": "path",
-      "url": "../onecms-theme-oneten"
+      "type": "vcs",
+      "url": "https://github.com/webifycms/theme-green"
     },
     {
-      "type": "path",
-      "url": "../onecms-theme-onetwenty"
-    },
-    {
-      "type": "path",
-      "url": "../onecms-dev-tools"
+      "type": "vcs",
+      "url": "https://github.com/webifycms/dev-tools"
     }
   ],
   "config": {
@@ -75,17 +71,18 @@
   },
   "autoload": {
     "psr-4": {
-      "App\\": "src/"
+      "Webify\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "App\\Test\\": "test/"
+      "Webify\\Test\\": "test/"
     }
   },
   "scripts": {
     "post-install-cmd": [
-      "yii\\composer\\Installer::postInstall"
+      "yii\\composer\\Installer::postInstall",
+      "php -r \"copy('.env.example', '.env');\""
     ],
     "post-create-project-cmd": [
       "yii\\composer\\Installer::postCreateProject",
@@ -104,15 +101,15 @@
   "optimize-autoloader": true,
   "extra": {
     "installer-types": [
-      "onecms-extension",
-      "onecms-theme"
+      "webifycms-extension",
+      "webifycms-theme"
     ],
     "installer-paths": {
-      "extensions/{$vendor}/{$name}/": [
-        "type:onecms-extension"
+      "extensions/{$name}/": [
+        "type:webifycms-extension"
       ],
       "themes/{$name}/": [
-        "type:onecms-theme"
+        "type:webifycms-theme"
       ]
     },
     "yii\\composer\\Installer::postCreateProject": {

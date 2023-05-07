@@ -1,8 +1,17 @@
 <?php
-
+/**
+ * The file is part of the "webifycms/app", WebifyCMS application.
+ *
+ * @see https://webifycms.com/
+ *
+ * @copyright Copyright (c) 2023 WebifyCMS
+ * @license https://webifycms.com/license
+ * @author Mohammed Shifreen <mshifreen@gmail.com>
+ */
 declare(strict_types=1);
 
-use OneTwenty\Theme;
+use Green\Theme;
+use function Webify\Base\Infrastructure\get_env_variable;
 
 require __DIR__ . '/aliases.php';
 
@@ -11,10 +20,10 @@ $db     = require __DIR__ . '/db.php';
 $config = [
 	'id'                  => 'web',
 	'name'                => get_env_variable('APPLICATION_NAME'),
-	'basePath'            => '@App',
-	'viewPath'            => '@App/templates',
+	'basePath'            => '@Webify',
+	'viewPath'            => '@Webify/templates',
 	'sourceLanguage'      => 'en-US',
-	'controllerNamespace' => 'App\Presentation\Web\Front\Controller',
+	'controllerNamespace' => 'Webify\Presentation\Web\Front\Controller',
 	'bootstrap'           => ['log'],
 	'aliases'             => [
 		'@bower' => '@vendor/bower-asset',
@@ -23,7 +32,7 @@ $config = [
 	'components' => [
 		'request' => [
 			// !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-			'cookieValidationKey' => 'btcW6+abxWQdZRX365TjawIGWhAbT1skUk8g1mVDLyE=',
+			'cookieValidationKey' => '',
 		],
 		'cache' => [
 			'class' => 'yii\caching\FileCache',
@@ -33,7 +42,7 @@ $config = [
 		//            'enableAutoLogin' => true,
 		//        ],
 		'errorHandler' => [
-			'errorAction' => 'site/error',
+			'errorAction' => 'hello/error',
 		],
 		'mailer' => [
 			'class' => 'yii\swiftmailer\Mailer',
@@ -71,7 +80,7 @@ $config = [
 			'translations' => [
 				'app*' => [
 					'class'    => 'yii\i18n\PhpMessageSource',
-					'basePath' => '@App/resources/translations',
+					'basePath' => '@Webify/resources/translations',
 				],
 			],
 		],
