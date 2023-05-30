@@ -11,6 +11,7 @@
 declare(strict_types=1);
 
 use Green\Theme;
+
 use function Webify\Base\Infrastructure\get_env_variable;
 
 require __DIR__ . '/aliases.php';
@@ -18,21 +19,22 @@ require __DIR__ . '/aliases.php';
 $params = require __DIR__ . '/params.php';
 $db     = require __DIR__ . '/db.php';
 $config = [
-	'id'                  => 'web',
-	'name'                => get_env_variable('APPLICATION_NAME'),
-	'basePath'            => '@Webify',
-	'viewPath'            => '@Webify/templates',
-	'sourceLanguage'      => 'en-US',
-	'controllerNamespace' => 'Webify\Presentation\Web\Front\Controller',
-	'bootstrap'           => ['log'],
-	'aliases'             => [
+	'id'                     => 'web',
+	'name'                   => get_env_variable('APPLICATION_NAME'),
+	'basePath'               => '@App',
+	'viewPath'               => '@App/templates',
+	'sourceLanguage'         => 'en-US',
+	'controllerNamespace'    => 'App\Presentation\Web\Front\Controller',
+	'bootstrap'              => ['log'],
+	'defaultRoute'           => 'hello',
+	'aliases'                => [
 		'@bower' => '@vendor/bower-asset',
 		'@npm'   => '@vendor/npm-asset',
 	],
 	'components' => [
 		'request' => [
 			// !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-			'cookieValidationKey' => '',
+			'cookieValidationKey' => 'IOQIlinyOL8PfVLM5J37OgTZ6thnfWF7',
 		],
 		'cache' => [
 			'class' => 'yii\caching\FileCache',
@@ -73,14 +75,14 @@ $config = [
 			'linkAssets'      => true,
 			'forceCopy'       => YII_DEBUG,
 		],
-		'view' => [
-			'theme' => Theme::class,
-		],
+//		'view' => [
+//			'theme' => Theme::class,
+//		],
 		'i18n' => [
 			'translations' => [
 				'app*' => [
 					'class'    => 'yii\i18n\PhpMessageSource',
-					'basePath' => '@Webify/resources/translations',
+					'basePath' => '@App/resources/translations',
 				],
 			],
 		],

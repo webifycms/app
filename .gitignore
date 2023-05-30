@@ -40,3 +40,9 @@ phpunit.phar
 
 # phpcsfixer cache is not needed
 .php-cs-fixer.cache
+
+# phpcsfixer local config is not needed
+.php-cs-fixer.php
+
+# phpstan local config is not needed
+.phpstab.neon

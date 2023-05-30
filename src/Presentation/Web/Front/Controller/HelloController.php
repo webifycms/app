@@ -10,7 +10,7 @@
  */
 declare(strict_types=1);
 
-namespace Webify\Presentation\Web\Front\Controller;
+namespace App\Presentation\Web\Front\Controller;
 
 use yii\web\Controller;
 
