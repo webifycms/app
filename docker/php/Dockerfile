@@ -1,4 +1,18 @@
-# base image
+# using composer image
+FROM composer:latest as composer
+
+# remove and create "app" directory
+RUN rm -rf /src/app && mkdir -p /src/app
+WORKDIR /src/app
+
+# copy composer configurations
+COPY composer.json composer.lock ./
+
+# install dependecies
+RUN composer install --ignore-platform-reqs --prefer-dist --no-scripts --no-dev --no-autoloader --no-cache
+RUN composer dump-autoload --optimize --apcu --no-dev
+
+# php base image
 FROM php:8.1-fpm
 
 # installing required apps
@@ -20,20 +34,18 @@ RUN chmod +x /usr/local/bin/install-php-extensions && \
     redis
 
 # copying application directory
-COPY . /app
-
-# install composer 
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+COPY . /src/app
 
 # modify user
 RUN usermod -u 1000 www-data
 
 # changing the ownership
-RUN chown -R www-data:1000 /app
+RUN chown -R www-data:1000 /src/app
 
 # change the current user to "www-data"
 USER www-data
 
 # setting working directory
-WORKDIR /app
+WORKDIR /src/app
+
 

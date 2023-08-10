@@ -1,6 +1,7 @@
 {
   "name": "webifycms/app",
   "description": "WebifyCMS is a content management application that aims to simplify the process of crafting beautiful web applications for the end-user.",
+  "license": "MIT",
   "keywords": [
     "webify",
     "webifycms",
@@ -19,12 +20,11 @@
   "prefer-stable": true,
   "require": {
     "php": ">=8.1",
-    "yiisoft/yii2": "^2.0",
     "oomphinc/composer-installers-extender": "^2.0",
-    "webifycms/ext-base": "dev-main",
-    "webifycms/ext-admin": "dev-main",
-    "webifycms/ext-user": "dev-main",
-    "webifycms/theme-green": "dev-main"
+    "webifycms/ext-base": "@dev",
+    "webifycms/ext-admin": "@dev",
+    "webifycms/ext-user": "@dev",
+    "webifycms/theme-green": "@dev"
   },
   "require-dev": {
     "webifycms/dev-tools": "*",
@@ -34,24 +34,16 @@
   },
   "repositories": [
     {
+      "type": "path",
+      "url": "../*",
+      "options": {
+        "symlink": true,
+        "relative": true
+      }
+    },
+    {
       "type": "composer",
       "url": "https://asset-packagist.org"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/webifycms/ext-base"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/webifycms/ext-admin"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/webifycms/ext-user"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/webifycms/theme-green"
     },
     {
       "type": "vcs",
@@ -59,6 +51,7 @@
     }
   ],
   "config": {
+    "optimize-autoloader": true,
     "process-timeout": 1800,
     "fxp-asset": {
       "enabled": false
@@ -82,7 +75,7 @@
   "scripts": {
     "post-install-cmd": [
       "yii\\composer\\Installer::postInstall",
-      "php -r \"copy('.env.example', '.env');\""
+      "php -r \"copy('.env.sample', '.env');\""
     ],
     "post-create-project-cmd": [
       "yii\\composer\\Installer::postCreateProject",
@@ -101,7 +94,6 @@
       "phpunit --testdox test"
     ]
   },
-  "optimize-autoloader": true,
   "extra": {
     "installer-types": [
       "webifycms-extension",

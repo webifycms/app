@@ -10,7 +10,7 @@
  */
 declare(strict_types=1);
 
-use Green\Theme;
+use Webify\Green\Theme;
 
 use function Webify\Base\Infrastructure\get_env_variable;
 
@@ -28,8 +28,9 @@ $config = [
 	'bootstrap'              => ['log'],
 	'defaultRoute'           => 'hello',
 	'aliases'                => [
-		'@bower' => '@vendor/bower-asset',
-		'@npm'   => '@vendor/npm-asset',
+		'@bower'   => '@vendor/bower-asset',
+		'@npm'     => '@vendor/npm-asset',
+		'@Green'   => '@Themes/theme-green/src',
 	],
 	'components' => [
 		'request' => [
@@ -75,9 +76,9 @@ $config = [
 			'linkAssets'      => true,
 			'forceCopy'       => YII_DEBUG,
 		],
-//		'view' => [
-//			'theme' => Theme::class,
-//		],
+		'view' => [
+			'theme' => Theme::class,
+		],
 		'i18n' => [
 			'translations' => [
 				'app*' => [

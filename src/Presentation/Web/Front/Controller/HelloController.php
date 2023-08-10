@@ -20,8 +20,6 @@ use yii\web\Controller;
 final class HelloController extends Controller
 {
 	/**
-	 * {@inheritDoc}
-	 *
 	 * @return array<string, array<string, string>>
 	 */
 	public function actions(): array

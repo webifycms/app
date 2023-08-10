@@ -13,16 +13,18 @@
  */
 declare(strict_types=1);
 
+use Webify\Base\Infrastructure\Service\Application\ConsoleApplicationService;
+use Webify\Base\Infrastructure\Service\Config\ConfigService;
+
 // should require the composer autoloader on first
-use function Webify\Base\Infrastructure\app;
-use function Webify\Base\Infrastructure\configure;
-use function Webify\Base\Infrastructure\enable_dev_env;
+use function Webify\Base\Infrastructure\dependency;
+use function Webify\Base\Infrastructure\enable_debug;
 use function Webify\Base\Infrastructure\load_env_variables;
 
 require __DIR__ . '/../vendor/autoload.php';
 
 // always enable development environment because it's console
-enable_dev_env();
+enable_debug();
 
 // load the env variables
 load_env_variables(dirname(__DIR__));
@@ -33,9 +35,4 @@ require __DIR__ . '/../vendor/yiisoft/yii2/Yii.php';
 // load default configurations
 $config = require __DIR__ . '/../config/console.php';
 
-// configure
-configure($config, 'console');
-// bootstrap the application
-$output = app()->run();
-// output to the console
-exit($output);
+(new ConsoleApplicationService(dependency(), new ConfigService($config)))->bootstrap();
