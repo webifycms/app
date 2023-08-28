@@ -1,0 +1,1 @@
+<h1>WebifyCMS error page.</h1>

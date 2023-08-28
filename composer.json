@@ -1,6 +1,6 @@
 {
   "name": "webifycms/app",
-  "description": "WebifyCMS is a content management application that aims to simplify the process of crafting beautiful web applications for the end-user.",
+  "description": "WebifyCMS is an application framework that enables users to craft stunning web applications. The framework simplifies the creation process with built-in content management features.",
   "license": "MIT",
   "keywords": [
     "webify",
@@ -74,8 +74,7 @@
   },
   "scripts": {
     "post-install-cmd": [
-      "yii\\composer\\Installer::postInstall",
-      "php -r \"copy('.env.sample', '.env');\""
+      "yii\\composer\\Installer::postInstall"
     ],
     "post-create-project-cmd": [
       "yii\\composer\\Installer::postCreateProject",

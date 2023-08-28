@@ -12,3 +12,7 @@ parameters:
 		- templates
 		- extensions
 		- themes
+	dynamicConstantNames:
+		- YII_DEBUG
+		- YII_ENV
+		- YII_ENV_DEV
