@@ -13,6 +13,7 @@ declare(strict_types=1);
 use Webify\Green\Theme;
 
 use function Webify\Base\Infrastructure\get_env_variable;
+use function Webify\Base\Infrastructure\in_debug;
 
 require __DIR__ . '/aliases.php';
 
@@ -55,7 +56,7 @@ $config = [
 			'useFileTransport' => true,
 		],
 		'log' => [
-			'traceLevel' => YII_DEBUG ? 3 : 0,
+			'traceLevel' => in_debug() ? 3 : 0,
 			'targets'    => [
 				[
 					'class'  => 'yii\log\FileTarget',

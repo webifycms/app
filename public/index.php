@@ -32,4 +32,5 @@ load_env_variables(dirname(__DIR__));
 // load default configurations
 $config = require __DIR__ . '/../config/web.php';
 
+// create application service and bootstrap
 (new WebApplicationService(dependency(), new ConfigService($config)))->bootstrap();
