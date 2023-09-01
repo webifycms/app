@@ -67,7 +67,11 @@ Navigate to the `APPLICATION_BASE_URL` value you configured in any browsers that
 
 ## 🤝 Like to contribute?
 
-Contributions, issues and feature requests are welcome!<br>Feel free to check [issues page](https://github.com/webifycms/app/issues).
+Contributions, issues and feature requests are welcome! Feel free to check the following pages:
+
+* [Contribution notes](https://github.com/webifycms/app/blob/main/CONTRIBUTING.md).
+* [Issues page](https://github.com/webifycms/app/issues).
+* [Code of conduct notes](https://github.com/webifycms/app/blob/main/CODE_OF_CONDUCT.md).
 
 ## ⭐️ Show your support
 
