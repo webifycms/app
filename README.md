@@ -1,4 +1,4 @@
-![cover](https://github.com/webifycms/app/assets/7717399/02ed0acc-6d9f-4e53-80bf-76aa72960887)
+![webifycms_logo](https://github.com/webifycms/app/assets/7717399/484aa370-d08d-434a-9c60-874efe5ccaa6)
 
 # WebifyCMS
 
