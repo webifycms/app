@@ -21,10 +21,10 @@
   "require": {
     "php": ">=8.1",
     "oomphinc/composer-installers-extender": "^2.0",
-    "webifycms/ext-base": "@dev",
-    "webifycms/ext-admin": "@dev",
-    "webifycms/ext-user": "@dev",
-    "webifycms/theme-green": "@dev"
+    "webifycms/ext-base": "*",
+    "webifycms/ext-admin": "*",
+    "webifycms/ext-user": "*",
+    "webifycms/theme-green": "*"
   },
   "require-dev": {
     "webifycms/dev-tools": "*",
@@ -34,12 +34,20 @@
   },
   "repositories": [
     {
-      "type": "path",
-      "url": "../*",
-      "options": {
-        "symlink": true,
-        "relative": true
-      }
+      "type": "vcs",
+      "url": "https://github.com/webifycms/ext-base"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/webifycms/ext-admin"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/webifycms/ext-user"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/webifycms/theme-green"
     },
     {
       "type": "composer",

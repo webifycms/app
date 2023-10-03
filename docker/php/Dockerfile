@@ -2,8 +2,8 @@
 FROM composer:latest as composer
 
 # remove and create "app" directory
-RUN rm -rf /src/app && mkdir -p /src/app
-WORKDIR /src/app
+RUN rm -rf /app && mkdir -p /app
+WORKDIR /app
 
 # copy composer configurations
 COPY composer.json composer.lock ./
@@ -34,18 +34,18 @@ RUN chmod +x /usr/local/bin/install-php-extensions && \
     redis
 
 # copying application directory
-COPY . /src/app
+COPY . /app
 
 # modify user
 RUN usermod -u 1000 www-data
 
 # changing the ownership
-RUN chown -R www-data:1000 /src/app
+RUN chown -R www-data:1000 /app
 
 # change the current user to "www-data"
 USER www-data
 
 # setting working directory
-WORKDIR /src/app
+WORKDIR /app
 
 
