@@ -18,7 +18,7 @@ return [
 	'framework' => $framework,
 	'bootstrap' => [
 		\Webify\Base\Infrastructure\WebBootstrap::class,
-		\Webify\Admin\WebBootstrap::class,
+		\Webify\Admin\Infrastructure\WebBootstrap::class,
 		\Webify\User\WebBootstrap::class,
 	],
 ];
