@@ -1,4 +1,4 @@
-![webifycms_logo](https://github.com/webifycms/app/assets/7717399/484aa370-d08d-434a-9c60-874efe5ccaa6)
+![WebifyCMS_Logo](https://github.com/webifycms/app/assets/7717399/25fbf644-c5bd-47a8-a03d-526e9e984e99)
 
 # WebifyCMS
 
@@ -6,7 +6,7 @@
 
 WebifyCMS is an application framework that enables users to craft stunning web applications. The framework simplifies the creation process with built-in content management features.
 
-* WebifyCMS is designed with **Clean Architecture** and **Domain Driven Design (DDD)** to separate and protect the business logic. It helps to easily maintain the entire codebase and makes it adaptable to technological changes.
+* WebifyCMS is designed with **Clean Architecture** and **Domain Driven Design (DDD)** to separate and protect the business logic. It helps to maintain the entire codebase easily and makes it adaptable to technological changes.
 * Each bound context has been divided into an extension for easy development, and the base extension contains reusable components.
 * Develop with [Yii](https://www.yiiframework.com/) framework to handle the infrastructure without reinventing the wheel.
 * Targeting the end-user for easy customization, administrating, designing, and developing new features.
@@ -35,7 +35,7 @@ The following instructions will help you to get a copy of the project up and run
 
 ### Prerequisites
 
-* An environment that can run Docker or Docker Desktop and make sure you have installed one of it.
+* An environment that can run Docker or Docker Desktop and ensure you have installed one.
 
 ### Installation
 
@@ -63,7 +63,7 @@ docker compose up -d
 
 ### Run the application
 
-Navigate to the `APPLICATION_BASE_URL` value you configured in any browsers that you prefer.
+Navigate to the `APPLICATION_BASE_URL` value you configured in any browsers you prefer.
 
 ## 🤝 Like to contribute?
 
@@ -87,4 +87,4 @@ If this project interests you, please consider giving it a ⭐️!
 
 ## License
 
-WebifyCMS is licensed under MIT license and see the [LICENSE.md](https://github.com/webifycms/app/blob/main/LICENSE.md) file for details.
+WebifyCMS is licensed under MIT license, see the [LICENSE.md](https://github.com/webifycms/app/blob/main/LICENSE.md) file for details.
