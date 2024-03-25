@@ -1,6 +1,6 @@
-![WebifyCMS_Logo](https://github.com/webifycms/app/assets/7717399/25fbf644-c5bd-47a8-a03d-526e9e984e99)
-
 # WebifyCMS
+
+![WebifyCMS_Logo](https://github.com/webifycms/app/assets/7717399/25fbf644-c5bd-47a8-a03d-526e9e984e99)
 
 > 👋 Hey there! We're still in the early stage of development, so you may not find all the features just yet. It's not quite ready for use in productions, but we'd love for you to give it a try, Don't mind to [log bugs](https://github.com/webifycms/app/issues) and help us improve it! Thanks for your support.
 

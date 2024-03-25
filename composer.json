@@ -21,13 +21,13 @@
   "require": {
     "php": ">=8.1",
     "oomphinc/composer-installers-extender": "^2.0",
-    "webifycms/ext-base": "*",
-    "webifycms/ext-admin": "*",
-    "webifycms/ext-user": "*",
-    "webifycms/theme-green": "*"
+    "webifycms/ext-base": "dev-main",
+    "webifycms/ext-admin": "dev-main",
+    "webifycms/ext-user": "dev-main",
+    "webifycms/theme-green": "dev-main"
   },
   "require-dev": {
-    "webifycms/dev-tools": "*",
+    "webifycms/dev-tools": "^0.7",
     "phpunit/phpunit": "^10",
     "yiisoft/yii2-debug": "~2.1.0",
     "yiisoft/yii2-faker": "~2.0.0"
