@@ -20,7 +20,7 @@ require __DIR__ . '/aliases.php';
 $params = require __DIR__ . '/params.php';
 $db     = require __DIR__ . '/db.php';
 $config = [
-	'id'                     => 'web',
+	'id'                     => get_env_variable('APPLICATION_ID'),
 	'name'                   => get_env_variable('APPLICATION_NAME'),
 	'basePath'               => '@App',
 	'viewPath'               => '@App/templates',

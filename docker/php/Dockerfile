@@ -1,28 +1,7 @@
-# using composer image
-FROM composer:latest as composer
+FROM php:8.2-fpm-alpine
 
-# remove and create "app" directory
-RUN rm -rf /app && mkdir -p /app
-WORKDIR /app
-
-# copy composer configurations
-COPY composer.json composer.lock ./
-
-# install dependecies
-RUN composer install --ignore-platform-reqs --prefer-dist --no-scripts --no-dev --no-autoloader --no-cache
-RUN composer dump-autoload --optimize --apcu --no-dev
-
-# php base image
-FROM php:8.1-fpm
-
-# installing required apps
-RUN apt-get update > /dev/null && apt-get install -y \
-    git \
-    nano \
-    unzip
-
-# adding php extensions installer
-ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
+# copy PHP extension installer image binary into the container
+COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
 
 # installing php extensions
 RUN chmod +x /usr/local/bin/install-php-extensions && \
@@ -33,19 +12,15 @@ RUN chmod +x /usr/local/bin/install-php-extensions && \
     opcache \
     redis
 
-# copying application directory
-COPY . /app
+# copy Composer binary into the container
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# modify user
-RUN usermod -u 1000 www-data
+# sets working directory
+WORKDIR /var/www/html
 
-# changing the ownership
-RUN chown -R www-data:1000 /app
+# copy application files to the working directory and change ownership
+COPY . .
 
-# change the current user to "www-data"
-USER www-data
-
-# setting working directory
-WORKDIR /app
-
-
+# expose port 9000 and start php-fpm
+EXPOSE 9000
+CMD ["php-fpm"]
