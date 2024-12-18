@@ -16,18 +16,18 @@ WebifyCMS is an application framework that enables users to craft stunning web a
 
 The project is currently in its early stages of development, and many features are yet to come. Here is our roadmap of current and upcoming features for reference:
 
-| Feature | Status |
-| --- | --- |
-| Develop a base extension for reusable components | ✅ done |
-| Create application skeleton with the default configurations | ✅ done |
-| Create dev-tools package to define coding standards, to use static analyzer etc... | ✅ done |
-| Implement Docker with Docker compose | ✅ done |
-| Develop an admin extension | ⏳ in progress |
-| Develop an user extension | ⏳ in progress |
-| Develop a default theme | ⏳ in progress |
-| Develop a site extension | ✳️ yet to start |
-| Develop a blog extension | ✳️ yet to start |
-| Develop a market extension to manage extensions and themes | ✳️ yet to start |
+| Feature                                                                            | Status          |
+|------------------------------------------------------------------------------------|-----------------|
+| Develop a base extension for reusable components                                   | ✅ done          |
+| Create application skeleton with the default configurations                        | ✅ done          |
+| Create dev-tools package to define coding standards, to use static analyzer etc... | ✅ done          |
+| Implement Docker with Docker compose                                               | ✅ done          |
+| Develop an admin extension                                                         | ⏳ in progress   |
+| Develop an user extension                                                          | ⏳ in progress   |
+| Develop a default theme                                                            | ⏳ in progress   |
+| Develop a site extension                                                           | ✳️ yet to start |
+| Develop a blog extension                                                           | ✳️ yet to start |
+| Develop a market extension to manage extensions and themes                         | ✳️ yet to start |
 
 ## Quick Start
 
@@ -53,7 +53,7 @@ git clone https://github.com/webifycms/app.git .
 cp .env.sample .env
 ```
 
-> The above command will create a .env file from the sample file provided in the project root and fill the values in the file according to your needs. There are some default values and you can change them if needed. Add the configured `APPLICATION_BASE_URL` value to the host file.
+> The above command will create a .env file from the sample file provided in the project root and fill the values in the file according to your needs. There are some default values and you can change them if needed. Add the configured `APP_BASE_URL` value to the host file.
 
 ### Time to run the containers
 
@@ -63,7 +63,7 @@ docker compose up -d
 
 ### Run the application
 
-Navigate to the `APPLICATION_BASE_URL` value you configured in any browsers you prefer.
+Navigate to the `APP_BASE_URL` value you configured in any browsers you prefer.
 
 ## 🤝 Like to contribute?
 

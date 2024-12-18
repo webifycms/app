@@ -10,14 +10,15 @@
  */
 declare(strict_types=1);
 
-namespace App\Presentation\Web\Front\Controller;
+namespace App\Infrastructure\Presentation\Web\Controller;
 
-use yii\web\Controller;
+use Webify\Base\Infrastructure\Presentation\Web\Controller\BaseWebController;
+use yii\web\ErrorAction;
 
 /**
  * This controller is provided as an example for you to learn how to create controller actions.
  */
-final class HelloController extends Controller
+final class HomeController extends BaseWebController
 {
 	/**
 	 * @return array<string, array<string, string>>
@@ -26,7 +27,7 @@ final class HelloController extends Controller
 	{
 		return [
 			'error' => [
-				'class' => 'yii\web\ErrorAction',
+				'class' => ErrorAction::class,
 			],
 		];
 	}
