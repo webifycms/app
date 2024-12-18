@@ -81,13 +81,6 @@
     }
   },
   "scripts": {
-    "post-install-cmd": [
-      "yii\\composer\\Installer::postInstall"
-    ],
-    "post-create-project-cmd": [
-      "yii\\composer\\Installer::postCreateProject",
-      "yii\\composer\\Installer::postInstall"
-    ],
     "code-sniff": [
       "php-cs-fixer fix --verbose --dry-run --diff --show-progress=dots"
     ],
@@ -112,20 +105,6 @@
       ],
       "themes/{$name}/": [
         "type:webifycms-theme"
-      ]
-    },
-    "yii\\composer\\Installer::postCreateProject": {
-      "setPermission": [
-        {
-          "runtime": "0777",
-          "public/assets": "0777",
-          "bin/yii": "0755"
-        }
-      ]
-    },
-    "yii\\composer\\Installer::postInstall": {
-      "generateCookieValidationKey": [
-        "config/framework/web.php"
       ]
     }
   }

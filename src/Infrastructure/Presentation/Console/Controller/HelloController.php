@@ -10,7 +10,7 @@
  */
 declare(strict_types=1);
 
-namespace Webify\Presentation\Console\Controller;
+namespace App\Infrastructure\Presentation\Console\Controller;
 
 use yii\console\Controller;
 use yii\console\ExitCode;

@@ -11,7 +11,7 @@ volumes:
 services:
   # PHP service
   app:
-    container_name: ${APPLICATION_ID}-php
+    container_name: ${APP_ID}-php
     build:
       context: .
       dockerfile: ./docker/php/Dockerfile
@@ -24,7 +24,7 @@ services:
   
   # Nginx service
   server:
-    container_name: ${APPLICATION_ID}-nginx
+    container_name: ${APP_ID}-nginx
     image: nginx:alpine
     volumes:
       - ./:/var/www/html
@@ -38,7 +38,7 @@ services:
   
   # MariaDB service
   db:
-    container_name: ${APPLICATION_ID}-db
+    container_name: ${APP_ID}-db
     image: mariadb:10
     ports:
       - "${DATABASE_PORT}:3306"
