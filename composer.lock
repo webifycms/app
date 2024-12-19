@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d1b53fdd0c1f20b2b689e6d52a1364bc",
+    "content-hash": "345e2fce0752bcbe525ef760b2afa947",
     "packages": [
         {
             "name": "bower-asset/inputmask",
@@ -1431,27 +1431,20 @@
         },
         {
             "name": "webifycms/ext-admin",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/webifycms/ext-admin.git",
-                "reference": "34d83e63ca120e4a3b68a05f285307aaddea299b"
-            },
+            "version": "dev-local",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/webifycms/ext-admin/zipball/34d83e63ca120e4a3b68a05f285307aaddea299b",
-                "reference": "34d83e63ca120e4a3b68a05f285307aaddea299b",
-                "shasum": ""
+                "type": "path",
+                "url": "../ext-admin",
+                "reference": "d7de27d19bbc6c13452e84b4de44c96154332289"
             },
             "require": {
                 "php": ">=8.1",
-                "webifycms/ext-base": "dev-main"
+                "webifycms/ext-base": "*"
             },
             "require-dev": {
                 "phpunit/phpunit": "^10",
-                "webifycms/dev-tools": "*"
+                "webifycms/dev-tools": "^0.7"
             },
-            "default-branch": true,
             "type": "webifycms-extension",
             "autoload": {
                 "psr-4": {
@@ -1487,25 +1480,17 @@
                 }
             ],
             "description": "The WebifyCMS admin extension provides basic administration features of the application and includes an API for other extensions to use.",
-            "support": {
-                "source": "https://github.com/webifycms/ext-admin/tree/main",
-                "issues": "https://github.com/webifycms/ext-admin/issues"
-            },
-            "time": "2024-12-17T18:59:06+00:00"
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "webifycms/ext-base",
             "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/webifycms/ext-base.git",
-                "reference": "4b4f1580774642e5f8d19c568a1a87a84376a8d2"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/webifycms/ext-base/zipball/4b4f1580774642e5f8d19c568a1a87a84376a8d2",
-                "reference": "4b4f1580774642e5f8d19c568a1a87a84376a8d2",
-                "shasum": ""
+                "type": "path",
+                "url": "../ext-base",
+                "reference": "4b4f1580774642e5f8d19c568a1a87a84376a8d2"
             },
             "require": {
                 "php": ">=8.1",
@@ -1517,7 +1502,6 @@
                 "phpunit/phpunit": "^10",
                 "webifycms/dev-tools": "^0.7"
             },
-            "default-branch": true,
             "type": "webifycms-extension",
             "autoload": {
                 "psr-4": {
@@ -1553,36 +1537,27 @@
                 }
             ],
             "description": "The WebifyCMS base extension serves as the foundation for the entire application, holding abstractions and reusable components.",
-            "support": {
-                "source": "https://github.com/webifycms/ext-base/tree/main",
-                "issues": "https://github.com/webifycms/ext-base/issues"
-            },
-            "time": "2024-12-17T17:52:59+00:00"
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "webifycms/ext-user",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/webifycms/ext-user.git",
-                "reference": "b1dac9ba3778bdb1a651c2e75dad17516a206391"
-            },
+            "version": "dev-local",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/webifycms/ext-user/zipball/b1dac9ba3778bdb1a651c2e75dad17516a206391",
-                "reference": "b1dac9ba3778bdb1a651c2e75dad17516a206391",
-                "shasum": ""
+                "type": "path",
+                "url": "../ext-user",
+                "reference": "d203cf30976f645e2595b1268b3b075230a98805"
             },
             "require": {
                 "php": ">=8.1",
-                "webifycms/ext-admin": "dev-main",
-                "webifycms/ext-base": "dev-main"
+                "webifycms/ext-admin": "*",
+                "webifycms/ext-base": "*"
             },
             "require-dev": {
                 "phpunit/phpunit": "^10",
-                "webifycms/dev-tools": "*"
+                "webifycms/dev-tools": "^0.7"
             },
-            "default-branch": true,
             "type": "webifycms-extension",
             "autoload": {
                 "psr-4": {
@@ -1615,36 +1590,27 @@
                 }
             ],
             "description": "The WebifyCMS user extension handles all user-related tasks, including user management, profile and account management, login, and registration.",
-            "support": {
-                "source": "https://github.com/webifycms/ext-user/tree/main",
-                "issues": "https://github.com/webifycms/ext-user/issues"
-            },
-            "time": "2024-12-18T12:45:54+00:00"
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "webifycms/theme-green",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/webifycms/theme-green.git",
-                "reference": "8dc5d0e492f4f8f1a8bb1844565e242a7ba087f1"
-            },
+            "version": "dev-local",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/webifycms/theme-green/zipball/8dc5d0e492f4f8f1a8bb1844565e242a7ba087f1",
-                "reference": "8dc5d0e492f4f8f1a8bb1844565e242a7ba087f1",
-                "shasum": ""
+                "type": "path",
+                "url": "../theme-green",
+                "reference": "91a1d4852825b2ff825bf00ef60933ce56c61829"
             },
             "require": {
                 "php": ">=8.1",
-                "webifycms/ext-admin": "dev-main",
-                "webifycms/ext-base": "dev-main"
+                "webifycms/ext-admin": "*",
+                "webifycms/ext-base": "*"
             },
             "require-dev": {
                 "phpunit/phpunit": "^10",
-                "webifycms/dev-tools": "*"
+                "webifycms/dev-tools": "^0.7"
             },
-            "default-branch": true,
             "type": "webifycms-theme",
             "autoload": {
                 "psr-4": {
@@ -1666,11 +1632,9 @@
                 }
             ],
             "description": "Green is an official WebifyCMS default front-end theme.",
-            "support": {
-                "source": "https://github.com/webifycms/theme-green/tree/main",
-                "issues": "https://github.com/webifycms/theme-green/issues"
-            },
-            "time": "2023-09-11T05:14:33+00:00"
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "yiisoft/yii2",
@@ -6141,12 +6105,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "webifycms/ext-base": 20,
-        "webifycms/ext-admin": 20,
-        "webifycms/ext-user": 20,
-        "webifycms/theme-green": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
