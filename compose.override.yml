@@ -1,0 +1,9 @@
+services:
+  # PHP service
+  app:
+    build:
+      context: .
+      dockerfile: ./docker/php/local.Dockerfile
+    volumes:
+      - ./:/var/www/html
+      - ../:/var/www

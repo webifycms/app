@@ -43,8 +43,3 @@ phpunit.phar
 
 # phpstan local config is not needed
 .phpstab.neon
-
-#other
-/compose.*.yml
-/composer.local.*
-/docker/**/*.local
