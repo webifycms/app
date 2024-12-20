@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The file is part of the "webifycms/app", WebifyCMS application.
  *
@@ -29,7 +30,10 @@ require __DIR__ . '/../vendor/yiisoft/yii2/Yii.php';
 load_env_variables(dirname(__DIR__));
 
 // comment out or delete the following line when deployed to production, by default the environment set as production.
-define_environment(get_env_variable('APP_ENVIRONMENT'), get_env_variable('APP_DEBUG') === 'true' ? true : false);
+define_environment(
+	get_env_variable('APP_ENVIRONMENT'),
+	get_env_variable('APP_DEBUG') === 'true'
+);
 
 // load default configurations
 $config = require __DIR__ . '/../config/web.php';

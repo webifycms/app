@@ -27,7 +27,7 @@
     "webifycms/theme-green": "dev-main"
   },
   "require-dev": {
-    "webifycms/dev-tools": "^0.7",
+    "webifycms/dev-tools": "^1.0",
     "phpunit/phpunit": "^10",
     "yiisoft/yii2-debug": "~2.1.0",
     "yiisoft/yii2-faker": "~2.0.0"
@@ -82,12 +82,12 @@
   },
   "scripts": {
     "code-sniff": [
-      "php-cs-fixer fix --verbose --dry-run --diff --show-progress=dots"
+      "php-cs-fixer fix --show-progress=dots --diff --dry-run"
     ],
     "code-format": [
-      "php-cs-fixer fix --verbose --show-progress=dots"
+      "php-cs-fixer fix --show-progress=dots"
     ],
-    "code-analyze": [
+    "code-analyse": [
       "phpstan"
     ],
     "test": [

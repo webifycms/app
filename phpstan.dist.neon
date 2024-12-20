@@ -16,3 +16,5 @@ parameters:
 		- YII_DEBUG
 		- YII_ENV
 		- YII_ENV_DEV
+		- APP_ENVIRONMENT
+		- APP_DEBUG

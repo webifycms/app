@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The file is part of the "webifycms/app", WebifyCMS application.
  *
@@ -18,13 +19,18 @@ use Webify\Tools\Fixer\Fixer;
 
 $finder = Finder::create()
 	->in(__DIR__)
-	->exclude([
-		__DIR__ . '/extensions',
-		__DIR__ . '/themes',
-		__DIR__ . '/vendor',
-	])
+	->exclude(
+		[
+			'extensions',
+			'themes',
+			'vendor',
+		]
+	)
 	->ignoreDotFiles(false)
 	->name('*.php')
 ;
 
-return (new Fixer($finder))->getConfig()->setUsingCache(false);
+return (new Fixer($finder))
+	->getConfig()
+	->setUsingCache(false)
+;
