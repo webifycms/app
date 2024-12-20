@@ -1,5 +1,6 @@
 #!/usr/bin/env php
 <?php
+
 /**
  * WebifyCMS console bootstrap file.
  *
@@ -15,22 +16,21 @@ declare(strict_types=1);
 
 use Webify\Base\Infrastructure\Service\Application\ConsoleApplicationService;
 use Webify\Base\Infrastructure\Service\Config\ConfigService;
-
-// should require the composer autoloader on first
+use function Webify\Base\Infrastructure\define_environment;
 use function Webify\Base\Infrastructure\dependency;
-use function Webify\Base\Infrastructure\enable_debug;
+use function Webify\Base\Infrastructure\get_env_variable;
 use function Webify\Base\Infrastructure\load_env_variables;
 
+// load composer autoloader
 require __DIR__ . '/../vendor/autoload.php';
-
-// always enable development environment because it's console
-enable_debug();
+// load Yii class file
+require __DIR__ . '/../vendor/yiisoft/yii2/Yii.php';
 
 // load the env variables
 load_env_variables(dirname(__DIR__));
 
-// load Yii class file
-require __DIR__ . '/../vendor/yiisoft/yii2/Yii.php';
+// always enable development environment because it's console
+define_environment(get_env_variable('APP_ENVIRONMENT'), true);
 
 // load default configurations
 $config = require __DIR__ . '/../config/console.php';

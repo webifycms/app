@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The file is part of the "webifycms/app", WebifyCMS application.
  *
@@ -93,7 +94,7 @@ $config = [
 	'params' => $params,
 ];
 
-// if (YII_ENV_DEV) {
+// if ('development' === APP_ENVIRONMENT) {
 //	// configuration adjustments for 'dev' environment
 //	$config['bootstrap'][]      = 'debug';
 //	$config['modules']['debug'] = [
