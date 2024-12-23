@@ -13,15 +13,17 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Presentation\Console\Controller;
 
-use yii\console\Controller;
+use Webify\Base\Infrastructure\Presentation\Console\Controller\ConsoleController;
 use yii\console\ExitCode;
 
 /**
  * This command echoes the first argument that you have entered.
  * This command is provided as an example for you to learn how to create console commands.
  */
-final class HelloController extends Controller
+final class HelloController extends ConsoleController
 {
+	private const DEFAULT_MESSAGE = "Let's simply transform to web.";
+
 	/**
 	 * This command echoes what you have entered as the message.
 	 *
@@ -29,7 +31,7 @@ final class HelloController extends Controller
 	 *
 	 * @return int Exit code
 	 */
-	public function actionIndex(string $message = 'hello world'): int
+	public function actionIndex(string $message = self::DEFAULT_MESSAGE): int
 	{
 		echo $message . "\n";
 
