@@ -13,13 +13,13 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Presentation\Web\Controller;
 
-use Webify\Base\Infrastructure\Presentation\Web\Controller\BaseWebController;
+use Webify\Base\Infrastructure\Presentation\Web\Controller\WebController;
 use yii\web\ErrorAction;
 
 /**
  * This controller is provided as an example for you to learn how to create controller actions.
  */
-final class HomeController extends BaseWebController
+final class HomeController extends WebController
 {
 	/**
 	 * @return array<string, array<string, string>>

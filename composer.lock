@@ -1435,12 +1435,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/webifycms/ext-admin.git",
-                "reference": "34d83e63ca120e4a3b68a05f285307aaddea299b"
+                "reference": "9a2f2c5ea7ca07658a29ad11ffdb23086f91d033"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webifycms/ext-admin/zipball/34d83e63ca120e4a3b68a05f285307aaddea299b",
-                "reference": "34d83e63ca120e4a3b68a05f285307aaddea299b",
+                "url": "https://api.github.com/repos/webifycms/ext-admin/zipball/9a2f2c5ea7ca07658a29ad11ffdb23086f91d033",
+                "reference": "9a2f2c5ea7ca07658a29ad11ffdb23086f91d033",
                 "shasum": ""
             },
             "require": {
@@ -1449,7 +1449,7 @@
             },
             "require-dev": {
                 "phpunit/phpunit": "^10",
-                "webifycms/dev-tools": "*"
+                "webifycms/dev-tools": "^1.0"
             },
             "default-branch": true,
             "type": "webifycms-extension",
@@ -1468,12 +1468,12 @@
             },
             "scripts": {
                 "code-sniff": [
-                    "php-cs-fixer fix --verbose --dry-run --diff --show-progress=dots --using-cache=no"
+                    "php-cs-fixer fix --show-progress=dots --diff --dry-run"
                 ],
                 "code-format": [
-                    "php-cs-fixer fix --verbose --show-progress=dots"
+                    "php-cs-fixer fix --show-progress=dots"
                 ],
-                "code-analyze": [
+                "code-analyse": [
                     "phpstan"
                 ],
                 "test": [
@@ -1491,7 +1491,7 @@
                 "source": "https://github.com/webifycms/ext-admin/tree/main",
                 "issues": "https://github.com/webifycms/ext-admin/issues"
             },
-            "time": "2024-12-17T18:59:06+00:00"
+            "time": "2024-12-22T04:56:57+00:00"
         },
         {
             "name": "webifycms/ext-base",
@@ -1499,12 +1499,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/webifycms/ext-base.git",
-                "reference": "4b4f1580774642e5f8d19c568a1a87a84376a8d2"
+                "reference": "f4c9e8a499489c86988f3cc650233412a1fc9c0d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webifycms/ext-base/zipball/4b4f1580774642e5f8d19c568a1a87a84376a8d2",
-                "reference": "4b4f1580774642e5f8d19c568a1a87a84376a8d2",
+                "url": "https://api.github.com/repos/webifycms/ext-base/zipball/f4c9e8a499489c86988f3cc650233412a1fc9c0d",
+                "reference": "f4c9e8a499489c86988f3cc650233412a1fc9c0d",
                 "shasum": ""
             },
             "require": {
@@ -1515,7 +1515,7 @@
             },
             "require-dev": {
                 "phpunit/phpunit": "^10",
-                "webifycms/dev-tools": "^0.7"
+                "webifycms/dev-tools": "^1.0"
             },
             "default-branch": true,
             "type": "webifycms-extension",
@@ -1534,12 +1534,12 @@
             },
             "scripts": {
                 "code-sniff": [
-                    "php-cs-fixer fix --verbose --dry-run --diff --show-progress=dots --using-cache=no"
+                    "php-cs-fixer fix --show-progress=dots --diff --dry-run"
                 ],
                 "code-format": [
-                    "php-cs-fixer fix --verbose --show-progress=dots"
+                    "php-cs-fixer fix --show-progress=dots"
                 ],
-                "code-analyze": [
+                "code-analyse": [
                     "phpstan"
                 ],
                 "test": [
@@ -1557,7 +1557,7 @@
                 "source": "https://github.com/webifycms/ext-base/tree/main",
                 "issues": "https://github.com/webifycms/ext-base/issues"
             },
-            "time": "2024-12-17T17:52:59+00:00"
+            "time": "2024-12-22T05:06:07+00:00"
         },
         {
             "name": "webifycms/ext-user",
@@ -1565,12 +1565,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/webifycms/ext-user.git",
-                "reference": "b1dac9ba3778bdb1a651c2e75dad17516a206391"
+                "reference": "e3bbf6e0e85244e4e766a7b17db6e9617cae145e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webifycms/ext-user/zipball/b1dac9ba3778bdb1a651c2e75dad17516a206391",
-                "reference": "b1dac9ba3778bdb1a651c2e75dad17516a206391",
+                "url": "https://api.github.com/repos/webifycms/ext-user/zipball/e3bbf6e0e85244e4e766a7b17db6e9617cae145e",
+                "reference": "e3bbf6e0e85244e4e766a7b17db6e9617cae145e",
                 "shasum": ""
             },
             "require": {
@@ -1580,7 +1580,7 @@
             },
             "require-dev": {
                 "phpunit/phpunit": "^10",
-                "webifycms/dev-tools": "*"
+                "webifycms/dev-tools": "^1.0"
             },
             "default-branch": true,
             "type": "webifycms-extension",
@@ -1596,12 +1596,12 @@
             },
             "scripts": {
                 "code-sniff": [
-                    "php-cs-fixer fix --verbose --dry-run --diff --show-progress=dots --using-cache=no"
+                    "php-cs-fixer fix --show-progress=dots --diff --dry-run"
                 ],
                 "code-format": [
-                    "php-cs-fixer fix --verbose --show-progress=dots --using-cache=no"
+                    "php-cs-fixer fix --show-progress=dots"
                 ],
-                "code-analyze": [
+                "code-analyse": [
                     "phpstan"
                 ],
                 "test": [
@@ -1619,7 +1619,7 @@
                 "source": "https://github.com/webifycms/ext-user/tree/main",
                 "issues": "https://github.com/webifycms/ext-user/issues"
             },
-            "time": "2024-12-18T12:45:54+00:00"
+            "time": "2024-12-22T05:02:45+00:00"
         },
         {
             "name": "webifycms/theme-green",
@@ -2048,13 +2048,13 @@
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-main": "3.x-dev"
-                },
                 "phpstan": {
                     "includes": [
                         "extension.neon"
                     ]
+                },
+                "branch-alias": {
+                    "dev-main": "3.x-dev"
                 }
             },
             "autoload": {
@@ -3138,16 +3138,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "10.5.39",
+            "version": "10.5.40",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "4e89eff200b801db58f3d580ad7426431949eaa9"
+                "reference": "e6ddda95af52f69c1e0c7b4f977cccb58048798c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/4e89eff200b801db58f3d580ad7426431949eaa9",
-                "reference": "4e89eff200b801db58f3d580ad7426431949eaa9",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/e6ddda95af52f69c1e0c7b4f977cccb58048798c",
+                "reference": "e6ddda95af52f69c1e0c7b4f977cccb58048798c",
                 "shasum": ""
             },
             "require": {
@@ -3219,7 +3219,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.39"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.40"
             },
             "funding": [
                 {
@@ -3235,7 +3235,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-12-11T10:51:07+00:00"
+            "time": "2024-12-21T05:49:06+00:00"
         },
         {
             "name": "psr/container",
