@@ -20,6 +20,7 @@ require __DIR__ . '/aliases.php';
 
 $params = require __DIR__ . '/params.php';
 $db     = require __DIR__ . '/db.php';
+$routes = require __DIR__ . '/routes.php';
 $config = [
 	'id'                     => get_env_variable('APP_ID'),
 	'name'                   => get_env_variable('APP_NAME'),
@@ -70,14 +71,12 @@ $config = [
 			'enablePrettyUrl' => true,
 			'showScriptName'  => false,
 			'suffix'          => '/',
-			'rules'           => [],
+			'rules'           => $routes,
 		],
 		'assetManager' => [
-			'basePath'        => '@webroot/assets/build',
-			'baseUrl'         => '@web/assets/build',
+			'basePath'        => '@webroot/assets',
+			'baseUrl'         => '@web/assets',
 			'appendTimestamp' => true,
-			'linkAssets'      => true,
-			'forceCopy'       => is_debug_enabled(),
 		],
 		'view' => [
 			'theme' => Theme::class,

@@ -21,4 +21,6 @@ use function Webify\Base\Infrastructure\dependency;
 $container = dependency()->getContainer();
 
 return [
+	'definitions' => [],
+	'singletons'  => [],
 ];

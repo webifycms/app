@@ -38,5 +38,5 @@ define_environment(
 // load default configurations
 $config = require __DIR__ . '/../config/web.php';
 
-// create application service and bootstrap
+// initialize application
 (new WebApplicationService(dependency(), new ConfigService($config)))->bootstrap();

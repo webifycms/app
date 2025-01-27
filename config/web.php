@@ -12,18 +12,24 @@
 declare(strict_types=1);
 
 use Webify\Admin\Infrastructure\Service\Bootstrap\WebBootstrapService as AdminWebBootstrapService;
+use Webify\Base\Domain\Service\Application\ApplicationServiceInterface;
 use Webify\Base\Infrastructure\Service\Bootstrap\WebBootstrapService as BaseWebBootstrapService;
 use Webify\User\Infrastructure\Service\Bootstrap\WebBootstrapService as UserWebBootstrapService;
+
+use function Webify\Base\Infrastructure\get_env_variable;
 
 // import framework configurations
 $framework = require __DIR__ . '/framework/web.php';
 
 return [
-	// 'administrationPath' => 'backend',
-	'framework' => $framework,
-	'bootstrap' => [
+	'administrationPath' => ApplicationServiceInterface::DEFAULT_ADMINISTRATION_PATH,
+	'framework'          => $framework,
+	'bootstrap'          => [
 		BaseWebBootstrapService::class,
 		AdminWebBootstrapService::class,
 		UserWebBootstrapService::class,
+	],
+	'vite' => [
+		'dev_server_url' => get_env_variable('VITE_DEV_SERVER_URL', 'http://loclahost:5173'),
 	],
 ];

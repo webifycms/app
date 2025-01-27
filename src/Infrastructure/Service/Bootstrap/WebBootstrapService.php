@@ -14,7 +14,6 @@ declare(strict_types=1);
 namespace App\Infrastructure\Service\Bootstrap;
 
 use Webify\Base\Infrastructure\Service\Bootstrap\BaseWebBootstrapService;
-use Webify\Base\Infrastructure\Service\Bootstrap\RegisterControllersBootstrapInterface;
 use Webify\Base\Infrastructure\Service\Bootstrap\RegisterDependencyBootstrapInterface;
 use Webify\Base\Infrastructure\Service\Bootstrap\RegisterRoutesBootstrapInterface;
 
@@ -27,7 +26,7 @@ use function Webify\Base\Infrastructure\get_alias;
  * and implements `RegisterDependencyBootstrapInterface` to manage dependencies
  * and `RegisterRoutesBootstrapInterface` to handle route definitions.
  */
-final class WebBootstrapService extends BaseWebBootstrapService implements RegisterDependencyBootstrapInterface, RegisterRoutesBootstrapInterface
+final class WebBootstrapService extends BaseWebBootstrapService implements RegisterDependencyBootstrapInterface
 {
 	public function init(): void
 	{
@@ -37,10 +36,5 @@ final class WebBootstrapService extends BaseWebBootstrapService implements Regis
 	public function dependencies(): array
 	{
 		return include_once get_alias('@App/config/dependencies.php');
-	}
-
-	public function routes(): array
-	{
-		return include_once get_alias('@App/config/routes.php');
 	}
 }
