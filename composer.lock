@@ -1435,12 +1435,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/webifycms/ext-admin.git",
-                "reference": "5af50e6ec369484aa10d63838dab4f026cc104bd"
+                "reference": "d5b52b5f46068deb469ace3c26795e2908e89dd3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webifycms/ext-admin/zipball/5af50e6ec369484aa10d63838dab4f026cc104bd",
-                "reference": "5af50e6ec369484aa10d63838dab4f026cc104bd",
+                "url": "https://api.github.com/repos/webifycms/ext-admin/zipball/d5b52b5f46068deb469ace3c26795e2908e89dd3",
+                "reference": "d5b52b5f46068deb469ace3c26795e2908e89dd3",
                 "shasum": ""
             },
             "require": {
@@ -1456,10 +1456,7 @@
             "autoload": {
                 "psr-4": {
                     "Webify\\Admin\\": "src"
-                },
-                "files": [
-                    "src/Infrastructure/Helpers.php"
-                ]
+                }
             },
             "autoload-dev": {
                 "psr-4": {
@@ -1491,7 +1488,7 @@
                 "source": "https://github.com/webifycms/ext-admin/tree/main",
                 "issues": "https://github.com/webifycms/ext-admin/issues"
             },
-            "time": "2025-01-18T16:08:40+00:00"
+            "time": "2025-01-27T18:06:26+00:00"
         },
         {
             "name": "webifycms/ext-base",
@@ -1565,12 +1562,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/webifycms/ext-user.git",
-                "reference": "e3bbf6e0e85244e4e766a7b17db6e9617cae145e"
+                "reference": "26e95a56b97420c0f9bf53e7ed8e0b861a96e624"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webifycms/ext-user/zipball/e3bbf6e0e85244e4e766a7b17db6e9617cae145e",
-                "reference": "e3bbf6e0e85244e4e766a7b17db6e9617cae145e",
+                "url": "https://api.github.com/repos/webifycms/ext-user/zipball/26e95a56b97420c0f9bf53e7ed8e0b861a96e624",
+                "reference": "26e95a56b97420c0f9bf53e7ed8e0b861a96e624",
                 "shasum": ""
             },
             "require": {
@@ -1619,7 +1616,7 @@
                 "source": "https://github.com/webifycms/ext-user/tree/main",
                 "issues": "https://github.com/webifycms/ext-user/issues"
             },
-            "time": "2024-12-22T05:02:45+00:00"
+            "time": "2025-01-27T18:10:34+00:00"
         },
         {
             "name": "webifycms/theme-green",
