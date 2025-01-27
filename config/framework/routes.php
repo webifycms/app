@@ -11,10 +11,8 @@
  */
 declare(strict_types=1);
 
-use function Webify\Admin\Infrastructure\administration_path;
-
-$adminPath = administration_path();
-
 return [
-
+	'/'                                      => 'home/index',
+	'/<controller:[\w\-]+>'                  => '<controller>/index',
+	'/<controller:[\w\-]+>/<action:[\w\-]+>' => '<controller>/<action>',
 ];
