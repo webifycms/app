@@ -11,8 +11,4 @@
  */
 declare(strict_types=1);
 
-return [
-	'/'                                      => 'home/index',
-	'/<controller:[\w\-]+>'                  => '<controller>/index',
-	'/<controller:[\w\-]+>/<action:[\w\-]+>' => '<controller>/<action>',
-];
+return [];

@@ -23,7 +23,7 @@ use function Webify\Base\Infrastructure\load_env_variables;
 
 // load composer autoloader
 require __DIR__ . '/../vendor/autoload.php';
-// load Yii class file
+// load a Yii class file
 require __DIR__ . '/../vendor/yiisoft/yii2/Yii.php';
 
 // load the env variables
@@ -35,4 +35,4 @@ define_environment(get_env_variable('APP_ENVIRONMENT'), true);
 // load default configurations
 $config = require __DIR__ . '/../config/console.php';
 
-(new ConsoleApplicationService(dependency(), new ConfigService($config)))->bootstrap();
+(new ConsoleApplicationService(dependency(), new ConfigService($config)))->run();

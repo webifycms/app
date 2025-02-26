@@ -11,6 +11,7 @@
  */
 declare(strict_types=1);
 
+use App\Infrastructure\Service\Bootstrap\WebBootstrapService as AppWebBootstrapService;
 use Webify\Admin\Infrastructure\Service\Bootstrap\WebBootstrapService as AdminWebBootstrapService;
 use Webify\Base\Domain\Service\Application\ApplicationServiceInterface;
 use Webify\Base\Infrastructure\Service\Bootstrap\WebBootstrapService as BaseWebBootstrapService;
@@ -28,6 +29,7 @@ return [
 		BaseWebBootstrapService::class,
 		AdminWebBootstrapService::class,
 		UserWebBootstrapService::class,
+		AppWebBootstrapService::class,
 	],
 	'vite' => [
 		'dev_server_url' => get_env_variable('VITE_DEV_SERVER_URL', 'http://loclahost:5173'),

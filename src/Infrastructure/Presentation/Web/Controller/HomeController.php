@@ -40,4 +40,9 @@ final class HomeController extends WebController
 	{
 		return $this->render('index');
 	}
+
+	public function actionAbout(): string
+	{
+		return $this->render('about');
+	}
 }
