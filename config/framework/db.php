@@ -19,7 +19,7 @@ return [
 	'username'    => get_env_variable('DATABASE_USER'),
 	'password'    => get_env_variable('DATABASE_PASSWORD'),
 	'charset'     => 'utf8',
-	'tablePrefix' => 'one_',
+	'tablePrefix' => 'web_',
 	// Schema cache options (for production environment)
 	// 'enableSchemaCache' => true,
 	// 'schemaCacheDuration' => 60,

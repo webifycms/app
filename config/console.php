@@ -11,6 +11,7 @@
  */
 declare(strict_types=1);
 
+use App\Infrastructure\Service\Bootstrap\ConsoleBootstrapService as AppConsoleBootstrapService;
 use Webify\User\Infrastructure\Service\Bootstrap\ConsoleBootstrapService as UserConsoleBootstrapService;
 
 // import framework configurations
@@ -20,5 +21,6 @@ return [
 	'framework' => $framework,
 	'bootstrap' => [
 		UserConsoleBootstrapService::class,
+		AppConsoleBootstrapService::class,
 	],
 ];

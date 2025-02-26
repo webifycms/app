@@ -20,48 +20,37 @@ require __DIR__ . '/aliases.php';
 
 $params = require __DIR__ . '/params.php';
 $db     = require __DIR__ . '/db.php';
-$routes = require __DIR__ . '/routes.php';
 $config = [
-	'id'                     => get_env_variable('APP_ID'),
-	'name'                   => get_env_variable('APP_NAME'),
-	'basePath'               => '@App',
-	'viewPath'               => '@App/templates',
-	'sourceLanguage'         => 'en-US',
-	'controllerNamespace'    => 'App\Infrastructure\Presentation\Web\Controller',
-	'bootstrap'              => ['log'],
-	'defaultRoute'           => 'home',
-	'aliases'                => [
-		'@bower'   => '@vendor/bower-asset',
-		'@npm'     => '@vendor/npm-asset',
-		'@Green'   => '@Themes/theme-green/src',
-	],
-	'components' => [
+	'id'                      => get_env_variable('APP_ID'),
+	'name'                    => get_env_variable('APP_NAME'),
+	'basePath'                => '@App',
+	'viewPath'                => '@App/templates',
+	'sourceLanguage'          => 'en-US',
+	'controllerNamespace'     => 'App\Infrastructure\Presentation\Web\Controller',
+	'bootstrap'               => ['log'],
+	// TODO: The Site extension should handle the default route
+	'defaultRoute'            => 'home',
+	'components'              => [
 		'request' => [
 			'cookieValidationKey' => get_env_variable('APP_COOKIE_VALIDATION_KEY'),
 		],
 		'cache' => [
 			'class' => 'yii\caching\FileCache',
 		],
-		//        'user' => [
-		//            'identityClass' => 'app\models\User',
-		//            'enableAutoLogin' => true,
-		//        ],
 		'errorHandler' => [
+			// TODO: The Site extension should handle the error action route
 			'errorAction' => 'home/error',
-		],
-		'mailer' => [
-			'class' => 'yii\swiftmailer\Mailer',
-			// send all mails to a file by default. You have to set
-			// 'useFileTransport' to false and configure transport
-			// for the mailer to send real emails.
-			'useFileTransport' => true,
 		],
 		'log' => [
 			'traceLevel' => is_debug_enabled() ? 3 : 0,
 			'targets'    => [
 				[
-					'class'  => 'yii\log\FileTarget',
-					'levels' => ['error', 'warning'],
+					'class'   => 'yii\log\FileTarget',
+					'levels'  => ['error', 'warning'],
+					'logVars' => ['_GET', '_POST'],
+					'except'  => [
+						'yii\web\HttpException:404',
+					],
 				],
 			],
 		],
@@ -71,7 +60,6 @@ $config = [
 			'enablePrettyUrl' => true,
 			'showScriptName'  => false,
 			'suffix'          => '/',
-			'rules'           => $routes,
 		],
 		'assetManager' => [
 			'basePath'        => '@webroot/assets',
@@ -79,7 +67,12 @@ $config = [
 			'appendTimestamp' => true,
 		],
 		'view' => [
-			'theme' => Theme::class,
+			'theme' => [
+				'class'   => Theme::class,
+				'pathMap' => [
+					'@App/templates' => '@Theme/templates',
+				],
+			],
 		],
 		'i18n' => [
 			'translations' => [
@@ -93,20 +86,14 @@ $config = [
 	'params' => $params,
 ];
 
-// if ('development' === APP_ENVIRONMENT) {
-//	// configuration adjustments for 'dev' environment
-//	$config['bootstrap'][]      = 'debug';
-//	$config['modules']['debug'] = [
-//		'class' => 'yii\debug\Module',
-//		// uncomment the following to add your IP if you are not connecting from localhost.
-//		// 'allowedIPs' => ['127.0.0.1', '::1'],
-//	];
-//	 $config['bootstrap'][]    = 'gii';
-//	 $config['modules']['gii'] = [
-//	 	'class' => 'yii\gii\Module',
-//	 	// uncomment the following to add your IP if you are not connecting from localhost.
-//	 	// 'allowedIPs' => ['172.19.96.1', '127.0.0.1', '::1'],
-//	 ];
-// }
+if ('dev' === APP_ENVIRONMENT) {
+	// configuration adjustments for 'dev' environment
+	$config['bootstrap'][]      = 'debug';
+	$config['modules']['debug'] = [
+		'class' => 'yii\debug\Module',
+		// uncomment the following to add your IP if you are not connecting from localhost.
+		'allowedIPs' => ['*'],
+	];
+}
 
 return $config;
