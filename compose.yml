@@ -19,6 +19,8 @@ services:
       - ./:/var/www/html
     restart: unless-stopped
     working_dir: /var/www/html
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     networks:
       - webifycms-docker
   
