@@ -23,7 +23,7 @@ use function Webify\Base\Infrastructure\load_env_variables;
 // load composer autoloader
 require __DIR__ . '/../vendor/autoload.php';
 
-// load Yii class file
+// load a Yii class file
 require __DIR__ . '/../vendor/yiisoft/yii2/Yii.php';
 
 // load the env variables
