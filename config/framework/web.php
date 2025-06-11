@@ -1,9 +1,9 @@
 <?php
 
 /**
- * The file is part of the "webifycms/app", WebifyCMS application.
+ * The file is part of the "webifycms/app", WebifyCMS extension package.
  *
- * @see https://webifycms.com/
+ * @see https://webifycms.com
  *
  * @copyright Copyright (c) 2023 WebifyCMS
  * @license https://webifycms.com/license
@@ -11,26 +11,26 @@
  */
 declare(strict_types=1);
 
+use Webify\Base\Infrastructure\Component\View\WebViewComponent;
 use Webify\Green\Theme;
 
 use function Webify\Base\Infrastructure\get_env_variable;
-use function Webify\Base\Infrastructure\is_debug_enabled;
 
 require __DIR__ . '/aliases.php';
 
 $params = require __DIR__ . '/params.php';
 $db     = require __DIR__ . '/db.php';
 $config = [
-	'id'                      => get_env_variable('APP_ID'),
-	'name'                    => get_env_variable('APP_NAME'),
-	'basePath'                => '@App',
-	'viewPath'                => '@App/templates',
-	'sourceLanguage'          => 'en-US',
-	'controllerNamespace'     => 'App\Infrastructure\Presentation\Web\Controller',
-	'bootstrap'               => ['log'],
+	'id'                  => get_env_variable('APP_ID'),
+	'name'                => get_env_variable('APP_NAME'),
+	'basePath'            => '@App',
+	'viewPath'            => '@App/templates',
+	'sourceLanguage'      => 'en-US',
+	'controllerNamespace' => 'App\Infrastructure\Presentation\Web\Controller',
+	'bootstrap'           => ['log'],
 	// TODO: The Site extension should handle the default route
-	'defaultRoute'            => 'home',
-	'components'              => [
+	'defaultRoute' => 'home',
+	'components'   => [
 		'request' => [
 			'cookieValidationKey' => get_env_variable('APP_COOKIE_VALIDATION_KEY'),
 		],
@@ -42,7 +42,7 @@ $config = [
 			'errorAction' => 'home/error',
 		],
 		'log' => [
-			'traceLevel' => is_debug_enabled() ? 3 : 0,
+			'traceLevel' => APP_DEBUG ? 3 : 0,
 			'targets'    => [
 				[
 					'class'   => 'yii\log\FileTarget',
@@ -67,6 +67,7 @@ $config = [
 			'appendTimestamp' => true,
 		],
 		'view' => [
+			'class' => WebViewComponent::class,
 			'theme' => [
 				'class'   => Theme::class,
 				'pathMap' => [
@@ -86,7 +87,7 @@ $config = [
 	'params' => $params,
 ];
 
-if ('dev' === APP_ENVIRONMENT) {
+if (ENV_DEVELOPMENT === APP_ENVIRONMENT) {
 	// configuration adjustments for 'dev' environment
 	$config['bootstrap'][]      = 'debug';
 	$config['modules']['debug'] = [

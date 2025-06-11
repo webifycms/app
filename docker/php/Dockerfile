@@ -1,4 +1,4 @@
-FROM php:8.4-fpm-alpine
+FROM php:8.3-fpm-alpine
 
 # copy PHP extension installer image binary into the container
 COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
