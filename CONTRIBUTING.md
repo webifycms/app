@@ -21,9 +21,9 @@ cd ~/webifycms-stack
 git clone https://github.com/webifycms/app.git .
 
 # clone the extensions that is required
-git clone https://github.com/webifycms/ext-base.git .
-git clone https://github.com/webifycms/ext-admin.git .
-git clone https://github.com/webifycms/ext-site.git . # (optional)
+git clone https://github.com/webifycms/ext-base.git 
+git clone https://github.com/webifycms/ext-admin.git 
+git clone https://github.com/webifycms/ext-site.git # (optional)
 ```
 
 > **NOTE:** At this point you can also clone the extension that you would 
