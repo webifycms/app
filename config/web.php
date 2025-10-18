@@ -32,6 +32,6 @@ return [
 		ApplicationExtension::class,
 	],
 	'vite' => [
-		'dev_server_url' => get_env_variable('VITE_DEV_SERVER_URL', 'http://loclahost:5173'),
+		'dev_server_url' => get_env_variable('VITE_DEV_SERVER_URL', 'http://localhost:5173'),
 	],
 ];
