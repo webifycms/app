@@ -8,7 +8,10 @@
     "cms",
     "cms project",
     "php cms",
-    "yii2 cms"
+    "yii2 cms",
+    "ddd cms",
+    "php ddd",
+    "app template"
   ],
   "homepage": "https://www.webifycms.com/",
   "type": "project",
@@ -20,11 +23,11 @@
   "prefer-stable": true,
   "require": {
     "php": ">=8.1",
-    "oomphinc/composer-installers-extender": "^2.0",
     "webifycms/ext-base": "dev-main",
     "webifycms/ext-admin": "dev-main",
     "webifycms/ext-user": "dev-main",
-    "webifycms/theme-green": "dev-main"
+    "webifycms/theme-green": "dev-main",
+    "oomphinc/composer-installers-extender": "^2.0"
   },
   "require-dev": {
     "webifycms/dev-tools": "^1.0",
@@ -33,6 +36,10 @@
     "yiisoft/yii2-faker": "~2.0.0"
   },
   "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    },
     {
       "type": "vcs",
       "url": "https://github.com/webifycms/ext-base"
@@ -48,10 +55,6 @@
     {
       "type": "vcs",
       "url": "https://github.com/webifycms/theme-green"
-    },
-    {
-      "type": "composer",
-      "url": "https://asset-packagist.org"
     }
   ],
   "config": {
