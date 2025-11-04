@@ -75,16 +75,52 @@ docker compose up
 
 ### Development Workflow
 
-1. First, always make sure your local code is up to date with the remote,
-   always `git pull` before you start something, or if you're middle of something, first commit and then do
-   `git pull --rebase origin main`.
-2. Update your `local` branch with `git pull && git rebase main`.
-3. You can start working from the `local` branch.
-4. Once you finish, stash your changes `git stash`.
-5. **Remember:** You must create a feature branch from the `main` always.
-6. If you're trying to resolve an issue that was reported in GitHub, the branch name
-   should go like this `issue-{number}-description`, Eg: `issue-20-fix-configurations`
-7. From your feature/new branch, pop the changes `git stash pop`
-8. Commit your changes and create a pull request after pushing the code.
+1. Sync the branches first, get the latest code from `main` and update the `local` branch.
 
-> ⚠️ You should not ever push the `local` branch to the remote.
+```bash
+git checkout main
+git pull
+git checkout local
+git rebase main
+```
+
+2. Work on the local branch. Do all the development and testing on the local branch.
+   And when the feature is done or the bug is fixed, commit the changes.
+
+```bash
+git add .
+// For a single line commit message
+git command -m "The commit message"
+// For multi line commit message
+git commit -m "
+> * Commit message 1
+> * Commit message 2"
+```
+
+3. Create a new feature branch from main (make sure the main branch is up to date).
+
+```bash
+git checkout main
+git pull
+// The branch name should: `issue-{number}-description`
+git checkout -b issue-20-fix-configurations
+```
+
+4. Time to cherry-pick the commit, the magic step. "cherry-pick" the commit to the new feature branch.
+
+```bash
+// Get back to local branch to get the commit hash
+git checkout local
+git log
+// From the log copy the commit hash (hdfQFgfu1255) which is needed to cherry pick
+git checkout issue-20-fix-configurations
+git cherry-pick hdfQFgfu1255
+```
+
+5. Finally, push and create a pull request.
+
+```bash
+git push --set-upstream origin issue-20-fix-configurations
+```
+
+> ⚠️ Don't ever push the `local` branch to the remote.
