@@ -1,0 +1,14 @@
+name: PR Review
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  pr-review:
+    uses: webifycms/.github/.github/workflow-templates/pr-review.yml@{ref}
+    with:
+      php-version: '8.1'
+      composer-version: 'v2'
