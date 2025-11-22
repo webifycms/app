@@ -10,7 +10,7 @@ WebifyCMS is an application framework that enables users to craft stunning web a
 * Each bound context has been divided into an extension for easy development, and the base extension contains reusable components.
 * Develop with [Yii](https://www.yiiframework.com/) framework to handle the infrastructure without reinventing the wheel.
 * Targeting the end-user for easy customization, administrating, designing, and developing new features.
-* Fully customizable user interfaces, including the admin panel and theme support.
+* Fully customizable user interfaces, including the admin panel with theme.
 
 ## Features
 
@@ -31,7 +31,7 @@ The project is currently in its early stages of development, and many features a
 
 ## Quick Start
 
-The following instructions will help you to get a copy of the project up and running on your local machine for development and testing purposes.
+The following instructions will help you to get a copy of WebifyCMS up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
@@ -53,7 +53,7 @@ git clone https://github.com/webifycms/app.git .
 cp .env.sample .env
 ```
 
-> The above command will create a .env file from the sample file provided in the project root and fill the values in the file according to your needs. There are some default values and you can change them if needed. Add the configured `APP_BASE_URL` value to the host file.
+> The above command will create a .env file from the sample file provided in the project root and fill the values in the file according to your needs. There are some default values and you can change them if needed. Add the configured `APP_BASE_URL` value to the host file if you changed to custom value.
 
 ### Time to run the containers
 
@@ -65,10 +65,19 @@ docker compose up -d
 
 Navigate to the `APP_BASE_URL` value you configured in any browsers you prefer.
 
+## Contributors
+
+> A huge thanks to the brilliant minds helping us prove that together, we can make great software.
+
+<a href="https://github.com/webifycms/app/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=webifycms/app" />
+</a>
+
 ## 🤝 Like to contribute?
 
 Contributions, issues and feature requests are welcome! Feel free to check the following pages:
 
+* [Project](https://github.com/orgs/webifycms/projects/4)
 * [Contribution notes](https://github.com/webifycms/app/blob/main/CONTRIBUTING.md).
 * [Issues page](https://github.com/webifycms/app/issues).
 * [Code of conduct notes](https://github.com/webifycms/app/blob/main/CODE_OF_CONDUCT.md).
@@ -77,7 +86,7 @@ Contributions, issues and feature requests are welcome! Feel free to check the f
 
 If this project interests you, please consider giving it a ⭐️!
 
-## Authors
+## Author
 
 👤 **Mohammed Shifreen** (Project Lead)
 
