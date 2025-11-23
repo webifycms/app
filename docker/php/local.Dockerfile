@@ -19,9 +19,11 @@ WORKDIR /var/www/html
 COPY . .
 
 # change permissions to directories
-RUN chmod -R 0777 runtime && \
-    chmod -R 0777 public/assets && \
-    chmod 0755 bin/webify
+RUN <<EOF
+chmod -R 0777 runtime
+chmod -R 0777 public/assets
+chmod -R 0755 bin/webify
+EOF
 
 # expose port 9000 and start php-fpm
 EXPOSE 9000
