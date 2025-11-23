@@ -39,6 +39,11 @@ The following instructions will help you to get a copy of WebifyCMS up and runni
 
 ### Installation
 
+You can use the WebifyCMS installer or manually to install.
+If you prefer the installer please check [here](https://github.com/webifycms/installer).
+
+#### Manual Installation
+
 ```console
 # you can replace 'webifycms' folder name as you prefer
 mkdir webifycms
