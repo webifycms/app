@@ -11,12 +11,6 @@
  */
 declare(strict_types=1);
 
-use function Webify\Base\Infrastructure\get_env_variable;
-use function Webify\Base\Infrastructure\load_env_variables;
-
-const ENV_PRODUCTION  = 'prod';
-const ENV_DEVELOPMENT = 'dev';
-
 // load composer autoloader
 require __DIR__ . '/../vendor/autoload.php';
 

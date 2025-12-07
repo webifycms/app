@@ -15,8 +15,6 @@ namespace App\Infrastructure\Service\Register;
 
 use Webify\Base\Infrastructure\Service\Register\Routes\RoutesRegisterService as AbstractRoutesRegisterService;
 
-use function Webify\Base\Infrastructure\get_alias;
-
 final class RoutesRegisterService extends AbstractRoutesRegisterService
 {
 	public function getRoutes(): array
