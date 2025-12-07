@@ -14,15 +14,13 @@ declare(strict_types=1);
 use Webify\Base\Infrastructure\Component\View\WebViewComponent;
 use Webify\Green\Theme;
 
-use function Webify\Base\Infrastructure\get_env_variable;
-
 require __DIR__ . '/aliases.php';
 
 $params = require __DIR__ . '/params.php';
 $db     = require __DIR__ . '/db.php';
 $config = [
-	'id'                  => get_env_variable('APP_ID'),
-	'name'                => get_env_variable('APP_NAME'),
+	'id'                  => get_env_variable('APP_ID', 'webifycms'),
+	'name'                => get_env_variable('APP_NAME', 'WebifyCMS'),
 	'basePath'            => '@App',
 	'viewPath'            => '@App/templates',
 	'sourceLanguage'      => 'en-US',

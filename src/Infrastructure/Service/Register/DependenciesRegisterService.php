@@ -15,8 +15,6 @@ namespace App\Infrastructure\Service\Register;
 
 use Webify\Base\Infrastructure\Service\Register\Dependencies\DependenciesRegisterService as AbstractDependenciesRegisterService;
 
-use function Webify\Base\Infrastructure\get_alias;
-
 final class DependenciesRegisterService extends AbstractDependenciesRegisterService
 {
 	public function getDependencies(): array

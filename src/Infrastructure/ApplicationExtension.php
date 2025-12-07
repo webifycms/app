@@ -25,9 +25,6 @@ use yii\base\InvalidArgumentException;
 use yii\base\InvalidConfigException;
 use yii\web\AssetManager;
 
-use function Webify\Base\Infrastructure\dependency;
-use function Webify\Base\Infrastructure\get_alias;
-
 final class ApplicationExtension implements ApplicationExtensionInterface
 {
 	/**
@@ -90,7 +87,7 @@ final class ApplicationExtension implements ApplicationExtensionInterface
 	public static function getInstance(): ApplicationExtensionInterface
 	{
 		// @phpstan-ignore-next-line
-		return dependency()
+		return di()
 			->getContainer()
 			->get(WebApplicationServiceInterface::class)
 			->getExtension(ApplicationExtensionInterface::class)

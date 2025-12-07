@@ -17,8 +17,6 @@ use Webify\Base\Domain\Service\Application\ApplicationServiceInterface;
 use Webify\Base\Infrastructure\BaseExtension;
 use Webify\User\Infrastructure\UserExtension;
 
-use function Webify\Base\Infrastructure\get_env_variable;
-
 // import framework configurations
 $framework = require __DIR__ . '/framework/web.php';
 

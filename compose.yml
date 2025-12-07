@@ -17,7 +17,7 @@ services:
       dockerfile: ./docker/php/Dockerfile
     volumes:
       - ./:/var/www/html
-    restart: unless-stopped
+    restart: always
     working_dir: /var/www/html
     extra_hosts:
       - "host.docker.internal:host-gateway"
@@ -34,7 +34,7 @@ services:
     ports:
       - "${NGINX_PORT}:80"
       - "${NGINX_PORT_SSL}:443"
-    restart: unless-stopped
+    restart: always
     networks:
       - webifycms-docker
   
@@ -51,6 +51,6 @@ services:
       MYSQL_DATABASE: ${DATABASE_NAME}
     volumes:
       - webifycms-db:/var/lib/mysql
-    restart: unless-stopped
+    restart: always
     networks:
       - webifycms-docker

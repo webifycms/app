@@ -13,12 +13,10 @@ declare(strict_types=1);
 
 use yii\di\Container;
 
-use function Webify\Base\Infrastructure\dependency;
-
 /**
  * @var Container $container
  */
-$container = dependency()->getContainer();
+$container = di()->getContainer();
 
 return [
 	'definitions' => [],

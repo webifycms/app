@@ -14,8 +14,6 @@ declare(strict_types=1);
 use Webify\Base\Infrastructure\Service\Application\WebApplicationService;
 use Webify\Base\Infrastructure\Service\Config\ConfigService;
 
-use function Webify\Base\Infrastructure\dependency;
-
 // load bootstrap file
 require __DIR__ . '/../bootstrap/bootstrap.php';
 
@@ -23,4 +21,4 @@ require __DIR__ . '/../bootstrap/bootstrap.php';
 $config = require __DIR__ . '/../config/web.php';
 
 // initialize application
-(new WebApplicationService(dependency(), new ConfigService($config)))->run();
+(new WebApplicationService(di(), new ConfigService($config)))->run();
