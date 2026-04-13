@@ -21,6 +21,9 @@ Thumbs.db
 # composer vendor dir
 /vendor/
 
+# ssl certs
+/docker/nginx/ssl/
+
 # composer itself is not needed
 composer.phar
 
@@ -44,7 +47,5 @@ phpunit.phar
 # phpstan local config is not needed
 .phpstab.neon
 
-#other
-/compose.*.yml
-/composer.local.*
-/docker/**/*.local
+# Docker files
+compose.override.yml
