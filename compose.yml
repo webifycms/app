@@ -23,7 +23,7 @@ services:
       - "host.docker.internal:host-gateway"
     networks:
       - webifycms-docker
-  
+
   # Nginx service
   server:
     container_name: ${APP_ID}-nginx
@@ -33,11 +33,10 @@ services:
       - ./docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
     ports:
       - "${NGINX_PORT}:80"
-      - "${NGINX_PORT_SSL}:443"
     restart: always
     networks:
       - webifycms-docker
-  
+
   # MariaDB service
   db:
     container_name: ${APP_ID}-db
