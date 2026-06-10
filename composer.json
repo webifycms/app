@@ -1,0 +1,97 @@
+{
+  "name": "webifycms/app",
+  "description": "WebifyCMS is an application framework that enables users to craft stunning web applications. The framework simplifies the creation process with built-in content management features.",
+  "license": "MIT",
+  "keywords": [
+    "webify",
+    "webifycms",
+    "cms",
+    "cms project",
+    "php cms",
+    "yii2 cms",
+    "ddd cms",
+    "php ddd",
+    "app template"
+  ],
+  "homepage": "https://www.webifycms.com/",
+  "type": "project",
+  "support": {
+    "issues": "https://github.com/webifycms/app/issues?state=open",
+    "source": "https://github.com/webifycms/app"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=8.4",
+    "webifycms/ext-base": "dev-main",
+    "oomphinc/composer-installers-extender": "^2.0"
+  },
+  "require-dev": {
+    "webifycms/dev-tools": "^1.0",
+    "phpunit/phpunit": "^13.1",
+    "fakerphp/faker": "^1.24",
+    "phpat/phpat": "^0.12",
+    "roave/security-advisories": "dev-latest"
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../extensions/*",
+      "options": {
+        "symlink": true
+      }
+    },
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
+  "config": {
+    "process-timeout": 1800,
+    "allow-plugins": {
+      "oomphinc/composer-installers-extender": true,
+      "composer/installers": true
+    }
+  },
+  "optimize-autoloader": true,
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "App\\Test\\": "test/",
+      "App\\Dev\\": "dev/"
+    }
+  },
+  "scripts": {
+    "analyse": [
+      "phpstan"
+    ],
+    "sniff": [
+      "php-cs-fixer fix --show-progress=dots --diff --dry-run"
+    ],
+    "test": [
+      "phpunit test"
+    ],
+    "code-check": ["@analyse", "@sniff"],
+    "code-format": [
+      "php-cs-fixer fix --show-progress=dots"
+    ]
+  },
+  "extra": {
+    "installer-types": [
+      "webifycms-extension",
+      "webifycms-theme"
+    ],
+    "installer-paths": {
+      "extensions/{$name}/": [
+        "type:webifycms-extension"
+      ],
+      "themes/{$name}/": [
+        "type:webifycms-theme"
+      ]
+    }
+  }
+}
