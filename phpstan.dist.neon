@@ -6,14 +6,18 @@ includes:
 	- vendor/phpat/phpat/extension.neon
 
 parameters:
+	reportUnmatchedIgnoredErrors: false
 	paths:
 		- src
 		- test
 	excludePaths:
 		- vendor
+		- extensions
+		- themes
+		- runtime
 
 services:
 	-
-		class: Webify\Base\Test\Architecture\ArchitectureSpec
+		class: App\Test\Architecture\ArchitectureSpec
 		tags:
 			- phpat.test

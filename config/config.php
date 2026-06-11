@@ -12,7 +12,6 @@
 declare(strict_types=1);
 
 use App\Infrastructure\Provider\{RegisterConsoleCommands, RegisterContainerDefinitions, RegisterRoutes};
-use Webify\Base\Infrastructure\Environment\Type;
 use Webify\Base\Infrastructure\Provider\BaseServiceProvider;
 
 return [
@@ -22,7 +21,7 @@ return [
 	'basePath'         => dirname(__DIR__),
 	'runtimePath'      => dirname(__DIR__) . '/runtime',
 	'configPath'       => dirname(__DIR__) . '/config',
-	'environment'      => $_ENV['APP_ENV'] ?? Type::Development->value,
+	'environment'      => $_ENV['APP_ENV'] ?? 'development',
 	'debug'            => filter_var($_ENV['APP_DEBUG'] ?? true, FILTER_VALIDATE_BOOLEAN),
 	'providers'        => [
 		BaseServiceProvider::class,
