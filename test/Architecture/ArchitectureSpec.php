@@ -1,19 +1,18 @@
 <?php
 
 /**
- * The file is part of the "webifycms/ext-base", WebifyCMS extension package.
+ * The file is part of the "webifycms/app", WebifyCMS extension package.
  *
- * @see https://webifycms.com/extension/base
+ * @see https://webifycms.com
  *
  * @copyright Copyright (c) 2023 WebifyCMS
- * @license https://webifycms.com/extension/base/license
+ * @license https://webifycms.com/license
  * @author Mohammed Shifreen <mshifreen@gmail.com>
  */
 declare(strict_types=1);
 
 namespace App\Test\Architecture;
 
-use Exception;
 use PHPat\Selector\Selector;
 use PHPat\Test\Builder\Rule;
 use PHPat\Test\PHPat;
