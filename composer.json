@@ -31,6 +31,7 @@
     "phpunit/phpunit": "^13.1",
     "fakerphp/faker": "^1.24",
     "phpat/phpat": "^0.12",
+    "filp/whoops": "^2.18",
     "roave/security-advisories": "dev-latest"
   },
   "repositories": [
