@@ -21,7 +21,7 @@ return [
 	'basePath'         => dirname(__DIR__),
 	'runtimePath'      => dirname(__DIR__) . '/runtime',
 	'configPath'       => dirname(__DIR__) . '/config',
-	'environment'      => $_ENV['APP_ENV'] ?? 'development',
+	'environment'      => $_ENV['APP_ENV'] ?? 'production',
 	'debug'            => filter_var($_ENV['APP_DEBUG'] ?? true, FILTER_VALIDATE_BOOLEAN),
 	'providers'        => [
 		BaseServiceProvider::class,

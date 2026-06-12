@@ -23,7 +23,8 @@
   "prefer-stable": true,
   "require": {
     "php": ">=8.4",
-    "webifycms/ext-base": "dev-main"
+    "webifycms/ext-base": "dev-main",
+    "oomphinc/composer-installers-extender": "^2.0"
   },
   "require-dev": {
     "webifycms/dev-tools": "^1.0",
@@ -43,7 +44,6 @@
     }
   ],
   "config": {
-    "process-timeout": 1800,
     "allow-plugins": {
       "oomphinc/composer-installers-extender": true,
       "composer/installers": true
