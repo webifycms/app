@@ -8,10 +8,12 @@
     "cms",
     "cms project",
     "php cms",
-    "yii2 cms",
     "ddd cms",
     "php ddd",
-    "app template"
+    "app template",
+    "php app template",
+    "clean architecture",
+    "php clean architecture"
   ],
   "homepage": "https://www.webifycms.com/",
   "type": "project",
@@ -23,7 +25,7 @@
   "prefer-stable": true,
   "require": {
     "php": ">=8.4",
-    "webifycms/ext-base": "dev-main",
+    "webifycms/ext-base": "^0.1.0-alpha",
     "oomphinc/composer-installers-extender": "^2.0"
   },
   "require-dev": {
@@ -35,10 +37,6 @@
     "roave/security-advisories": "dev-latest"
   },
   "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/webifycms/ext-base"
-    },
     {
       "type": "composer",
       "url": "https://asset-packagist.org"

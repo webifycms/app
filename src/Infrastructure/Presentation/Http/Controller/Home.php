@@ -5,7 +5,7 @@
  *
  * @see https://webifycms.com
  *
- * @copyright Copyright (c) 2023 WebifyCMS
+ * @copyright Copyright (c) 2023 - Present WebifyCMS
  * @license https://webifycms.com/license
  * @author Mohammed Shifreen <mshifreen@gmail.com>
  */
@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Presentation\Http\Controller;
 
+use App\Infrastructure\Service\TemplateRenderer;
 use Psr\Http\Message\{ResponseFactoryInterface, ResponseInterface, ServerRequestInterface, StreamFactoryInterface};
 
 /**
@@ -25,7 +26,8 @@ final readonly class Home
 	 */
 	public function __construct(
 		private ResponseFactoryInterface $responseFactory,
-		private StreamFactoryInterface $streamFactory
+		private StreamFactoryInterface $streamFactory,
+		private TemplateRenderer $templateRenderer,
 	) {}
 
 	/**
@@ -33,12 +35,12 @@ final readonly class Home
 	 */
 	public function __invoke(ServerRequestInterface $request): ResponseInterface
 	{
+		$body     = $this->templateRenderer->render('home.html.php');
 		$response = $this->responseFactory->createResponse(200);
-		$body     = $this->streamFactory->createStream("Hello, world! Let's simply transform to web.");
 
 		return $response
-			->withBody($body)
-			->withHeader('Content-Type', 'text/plain')
+			->withBody($this->streamFactory->createStream($body))
+			->withHeader('Content-Type', 'text/html; charset=utf-8')
 		;
 	}
 }
