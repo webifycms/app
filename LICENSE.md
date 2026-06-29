@@ -1,6 +1,6 @@
 # WebifyCMS License
 
-Copyright &copy; 2023 WebifyCMS (<https://www.webifycms.com>)
+Copyright © 2023–Present WebifyCMS (<https://www.webifycms.com>)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -11,6 +11,9 @@ furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
+
+**"WebifyCMS" is a registered trademark of WebifyCMS. Use of the name
+"WebifyCMS" in derivative works requires prior written permission.**
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,

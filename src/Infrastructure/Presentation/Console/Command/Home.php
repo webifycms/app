@@ -5,7 +5,7 @@
  *
  * @see https://webifycms.com
  *
- * @copyright Copyright (c) 2023 WebifyCMS
+ * @copyright Copyright (c) 2023 - Present WebifyCMS
  * @license https://webifycms.com/license
  * @author Mohammed Shifreen <mshifreen@gmail.com>
  */
@@ -41,6 +41,6 @@ final class Home
 	 */
 	private function message(): string
 	{
-		return "Hello, world! Let's simply transform to web.";
+		return 'Hello, World! Thank You for Trying WebifyCMS!';
 	}
 }

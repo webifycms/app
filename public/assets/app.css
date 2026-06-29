@@ -1,0 +1,93 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: "DM Sans", system-ui, sans-serif;
+    background: #222831;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: #ECECEC;
+    font-weight: 400;
+}
+
+.card {
+    background: #ECECEC;
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,.3);
+    padding: 4rem 3.5rem;
+    max-width: 640px;
+    width: 100%;
+    text-align: center;
+    transition: transform .2s ease;
+}
+
+.logo {
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1.25rem;
+    color: #30475E;
+}
+
+p.lead {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #30475E;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: #30475E;
+    margin-bottom: 2rem;
+}
+
+.footer {
+    font-size: .875rem;
+    color: #C1A57B;
+    border-top: 1px solid #C1A57B;
+    padding-top: 2rem;
+}
+
+.code {
+    font-size: 6rem;
+    font-weight: 800;
+    color: #C1A57B;
+    line-height: 1;
+    margin-bottom: .5rem;
+}
+
+.text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #30475E;
+}
+
+a.button {
+    display: inline-block;
+    text-decoration: none;
+    background: #30475E;
+    color: #ECECEC;
+    padding: .875rem 2rem;
+    border-radius: .75rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background .2s ease;
+}
+
+a.button:hover { background: #222831; }
+
+@media (max-width: 480px) {
+    .card { padding: 2.5rem 1.5rem; }
+    .logo { font-size: 2.5rem; }
+    h1 { font-size: 1.5rem; }
+    .code { font-size: 4rem; }
+}

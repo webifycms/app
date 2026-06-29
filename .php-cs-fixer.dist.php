@@ -5,7 +5,7 @@
  *
  * @see https://webifycms.com
  *
- * @copyright Copyright (c) 2023 WebifyCMS
+ * @copyright Copyright (c) 2023 - Present WebifyCMS
  * @license https://webifycms.com/license
  * @author Mohammed Shifreen <mshifreen@gmail.com>
  */
@@ -34,7 +34,7 @@ $header = <<<'HEADER'
 
 	@see https://webifycms.com
 
-	@copyright Copyright (c) 2023 WebifyCMS
+	@copyright Copyright (c) 2023 - Present WebifyCMS
 	@license https://webifycms.com/license
 	@author Mohammed Shifreen <mshifreen@gmail.com>
 	HEADER;
