@@ -2,18 +2,18 @@
 
 body {
     font-family: "DM Sans", system-ui, sans-serif;
-    background: #222831;
+    background: #08080c;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    color: #ECECEC;
+    color: #e2e2e8;
     font-weight: 400;
 }
 
 .card {
-    background: #ECECEC;
+    background: #0e0e14;
     border-radius: 1.5rem;
     box-shadow: 0 20px 60px rgba(0,0,0,.3);
     padding: 4rem 3.5rem;
@@ -32,34 +32,34 @@ h1 {
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 1.25rem;
-    color: #30475E;
+    color: #e2e2e8;
 }
 
 p.lead {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #30475E;
+    color: #9696a8;
     margin-bottom: 1.5rem;
 }
 
 p {
     font-size: 1.25rem;
     line-height: 1.7;
-    color: #30475E;
+    color: #9696a8;
     margin-bottom: 2rem;
 }
 
 .footer {
     font-size: .875rem;
-    color: #C1A57B;
-    border-top: 1px solid #C1A57B;
+    color: #a78bfa;
+    border-top: 1px solid rgba(167,139,250,.12);
     padding-top: 2rem;
 }
 
 .code {
     font-size: 6rem;
     font-weight: 800;
-    color: #C1A57B;
+    color: #a78bfa;
     line-height: 1;
     margin-bottom: .5rem;
 }
@@ -68,14 +68,14 @@ p {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
-    color: #30475E;
+    color: #e2e2e8;
 }
 
 a.button {
     display: inline-block;
     text-decoration: none;
-    background: #30475E;
-    color: #ECECEC;
+    background: #a78bfa;
+    color: #08080c;
     padding: .875rem 2rem;
     border-radius: .75rem;
     font-weight: 600;
@@ -83,7 +83,7 @@ a.button {
     transition: background .2s ease;
 }
 
-a.button:hover { background: #222831; }
+a.button:hover { background: #7c3aed; }
 
 @media (max-width: 480px) {
     .card { padding: 2.5rem 1.5rem; }
