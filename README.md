@@ -1,5 +1,13 @@
 # WebifyCMS
 
+[![PHP Version](https://img.shields.io/badge/PHP-8.4%2B-blue)](https://www.php.net)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE.md)
+[![Version](https://img.shields.io/badge/version-0.1.0--alpha-orange)](https://github.com/webifycms/app)
+
+<p align="center">
+  <img src="https://webifycms.com/assets/img/logo-full.png" alt="WebifyCMS Logo">
+</p>
+
 > 👋 Hey there! We're still in the early stage of development, so you may not find all the features just yet.
 > It's not quite ready for use in productions, but we'd love for you to give it a try,
 > Don't mind to [log bugs](https://github.com/webifycms/app/issues) and help us improve it! Thanks for your support.
@@ -22,13 +30,13 @@ Here is our roadmap of current and upcoming features for reference:
 
 | Features                                                                    | Status          |
 |-----------------------------------------------------------------------------|-----------------|
-| Base extension (shared-kernel)                                              | ✅ done          |
-| Application skeleton with the default configurations                        | ✅ done          |
-| dev-tools package to define coding standards, to use static analyzer etc... | ✅ done          |
-| Installer package to handle installation of WebifyCMS stack                 | ✅ done          |
-| Admin extension                                                             | ⏳ in progress   |
-| User extension                                                              | ⏳ in progress   |
-| Default theme                                                               | ⏳ in progress   |
+| Base extension (shared-kernel)                                              | ✅ done         |
+| Application skeleton with the default configurations                        | ✅ done         |
+| dev-tools package to define coding standards, to use static analyzer etc... | ✅ done         |
+| Installer package to handle installation of WebifyCMS stack                 | ✅ done         |
+| Admin extension                                                             | ⏳ in progress  |
+| User extension                                                              | ⏳ in progress  |
+| Default theme                                                               | ⏳ in progress  |
 | Site extension                                                              | ✳️ yet to start |
 | Blog extension                                                              | ✳️ yet to start |
 | Market extension to manage extensions and themes                            | ✳️ yet to start |
